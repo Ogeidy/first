@@ -3,7 +3,7 @@ import java.net.Socket;
 public class vk_first {
 	public static void main(String[] args) {
 		System.out.println("Hello world");
-		
+		//sdjkfhjks
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
 			

@@ -2,8 +2,7 @@ import java.net.Socket;
 
 public class vk_first {
 	public static void main(String[] args) {
-		System.out.println("Hello world");
-		//sdjkfhjks
+		//Create socket, send request and receive reply
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
 			

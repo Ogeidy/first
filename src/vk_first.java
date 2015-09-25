@@ -1,6 +1,7 @@
 import java.net.Socket;
 
 public class vk_first {
+	
 	public static void main(String[] args) {
 		//Create socket, send request and receive reply
 		try {

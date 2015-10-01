@@ -34,9 +34,7 @@ public class vk_first {
 		}
 		
 		//*** https request ***
-		
-		//https://oauth.vk.com/blank.html#access_token=d4b119db0001a9a1f54837a7b8a1a2688c646030ac92cdddd6a3a05116cf9e7899d7a451f0bc967585698&expires_in=86400&user_id=18124036
-		String https_url = "https://api.vk.com/method/users.search.xml?q=иван иванов&access_token=4ca1d44dd783ef9e2a5938ebc018a51f83548f6c93b8a18a53c70b918aaef1b9f9d4f555baf553bacb3d1";
+		String https_url = "https://api.vk.com/method/users.search.xml?q=Yakov%20Mamontov&access_token=c1efdb6b45686de99914d81a7a266ca403488474982c33ca678f15e152e4fe15da3dba01587e37a63112d";
 						//"https://vk.com";
 				//"https://yandex.ru";
 		URL url;
@@ -46,7 +44,7 @@ public class vk_first {
 			
 			HttpsURLConnection con =(HttpsURLConnection)url.openConnection();
 			
-			con.setDoOutput(true);
+			//con.setDoOutput(true);
 			con.setDoInput(true);
 			
 			//con.getOutputStream().write(req2.getBytes());

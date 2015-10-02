@@ -26,11 +26,14 @@ public class VkApi {
             + "&v=" + API_VERSION;
             
 	private String accessToken;
+	private String appId;
 	
-	public VkApi(){
+	public VkApi(String appId){
+		this.appId = appId;
 	}
 	
-	public VkApi(String accessToken){
+	public VkApi(String appId, String accessToken){
+		this.appId = appId;
 		this.accessToken = accessToken;
 	}
 	
@@ -38,9 +41,9 @@ public class VkApi {
 		this.accessToken = accessToken;
 	}
 	
-	public void auth(String appId) throws IOException{
+	public void auth() throws IOException{
 		String reqUrl = AUTH_URL
-                .replace("{APP_ID}", appId)
+                .replace("{APP_ID}", this.appId)
                 .replace("{PERMISSIONS}", "photos,messages")
                 .replace("{DISPLAY}", "page");
         try {
@@ -73,9 +76,10 @@ public class VkApi {
 			System.out.println(data);
 			
 			sock.close();
-		}
-		catch(Exception e) {
-			System.out.println("Error: "+e);
+		}catch (MalformedURLException e) {
+		     e.printStackTrace();
+		} catch (IOException e) {
+		     e.printStackTrace();
 		}
 	}
 	

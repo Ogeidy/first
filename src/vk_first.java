@@ -13,56 +13,16 @@ public class vk_first {
 		//String req = "GET http://api.vk.com/method/users.get.xml?user_ids=1&fields=bdate HTTP/1.0 \n\n";
 		String req = "GET http://api.vk.com/method/users.get.xml?user_ids=18124036&fields=bdate,city HTTP/1.0\r\n\r\n";
 		String req2 = "GET https://api.vk.com/method/users.search.xml?q=яков ћамонтов&access_token=d4b119db0001a9a1f54837a7b8a1a2688c646030ac92cdddd6a3a05116cf9e7899d7a451f0bc967585698 HTTP/1.0\r\n\r\n";
+		String req3 = "https://oauth.vk.com/authorize?client_id=5075749&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.37";
+		String https_url = "https://api.vk.com/method/users.search.xml?q=Yakov%20Mamontov&access_token=58adc3edf01eb80d8dbb86e0441cba1871c4405614192fd64fcd2364ae5cbea175da655e54ed46ebcad8b";
+
+		VkApi vk = new VkApi();
+		// http request
+		vk.sendReq("users.get.xml", "user_ids=18124036&fields=bdate,city");
 		
-		//*** http request ***
-		//Create socket, send request and receive reply
-		try {
-			Socket sock = new Socket("api.vk.com", 80);
-			
-			sock.getOutputStream().write(req.getBytes());
-			
-			byte buf[] = new byte[64*1024];
-			int r = sock.getInputStream().read(buf);
-			String data = new String(buf, 0, r);
-			
-			System.out.println(data);
-			
-			sock.close();
-		}
-		catch(Exception e) {
-			System.out.println("Error: "+e);
-		}
-		
-		//*** https request ***
-		String https_url = "https://api.vk.com/method/users.search.xml?q=Yakov%20Mamontov&access_token=c1efdb6b45686de99914d81a7a266ca403488474982c33ca678f15e152e4fe15da3dba01587e37a63112d";
-						//"https://vk.com";
-				//"https://yandex.ru";
-		URL url;
-		
-		try{
-			url = new URL(https_url);
-			
-			HttpsURLConnection con =(HttpsURLConnection)url.openConnection();
-			
-			//con.setDoOutput(true);
-			con.setDoInput(true);
-			
-			//con.getOutputStream().write(req2.getBytes());
-			
-			byte buf[] = new byte[64*1024];
-			int r = con.getInputStream().read(buf);
-			String data = new String(buf, 0, r);
-			
-			System.out.println(data);
-			
-			con.disconnect();
-			
-		} catch (MalformedURLException e) {
-		     e.printStackTrace();
-		 } catch (IOException e) {
-		     e.printStackTrace();
-		 }
-		
+		//*** https request 
+		vk.setAccessToken("58adc3edf01eb80d8dbb86e0441cba1871c4405614192fd64fcd2364ae5cbea175da655e54ed46ebcad8b");
+		vk.sendReqS("users.search.xml", "q=Yakov%20Mamontov");	
 		
 	}
 }

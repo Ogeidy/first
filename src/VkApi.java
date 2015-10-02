@@ -7,7 +7,15 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+/**
+ * This class realize some methods for connection with VK API.
+ * @author Yakov Mamontov
+ *
+ */
 public class VkApi {
 	
 	private String API_VERSION = "5.37";
@@ -41,6 +49,7 @@ public class VkApi {
 		this.accessToken = accessToken;
 	}
 	
+	/** Authentication on VK server and getting access token. */
 	public void auth() throws IOException{
 		String reqUrl = AUTH_URL
                 .replace("{APP_ID}", this.appId)
@@ -53,17 +62,21 @@ public class VkApi {
         }
 	}
 	
-	public void sendReq(String meth, String param){
+	/** Sending request via HTTP without access token. */
+	public void sendReq(String method, String parameters){
 		//*** http request ***
 		//Create socket, send request and receive reply
+		JSONParser parser = new JSONParser();
+		JSONObject resJson = new JSONObject();
+		
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
 			
 			String reqUrl = "GET "
 					+ API_REQUEST
 					.replace("https", "http")
-					.replace("{METHOD_NAME}", meth)
-					.replace("{PARAMETERS}", param)
+					.replace("{METHOD_NAME}", method)
+					.replace("{PARAMETERS}", parameters)
 					.replace("&access_token={ACCESS_TOKEN}", "")
 	                + " HTTP/1.0\r\n\r\n";
 			
@@ -73,7 +86,18 @@ public class VkApi {
 			int r = sock.getInputStream().read(buf);
 			String data = new String(buf, 0, r);
 			
-			System.out.println(data);
+			data.indexOf("{");
+			
+			//System.out.println(data);
+			
+			try {
+				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
 			
 			sock.close();
 		}catch (MalformedURLException e) {
@@ -83,8 +107,12 @@ public class VkApi {
 		}
 	}
 	
+	/** Sending request via HTTPS using access token. */
 	public void sendReqS(String meth, String param){
 		//*** https request ***
+		JSONParser parser = new JSONParser();
+		JSONObject resJson = new JSONObject();
+		
 		String reqUrl = API_REQUEST
 				.replace("{METHOD_NAME}", meth)
 				.replace("{PARAMETERS}", param)
@@ -101,7 +129,16 @@ public class VkApi {
 			int r = con.getInputStream().read(buf);
 			String data = new String(buf, 0, r);
 			
-			System.out.println(data);
+			//System.out.println(data);
+			
+			try {
+				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
 			
 			con.disconnect();
 			

@@ -8,12 +8,13 @@ public class vk_first {
 	public static void main(String[] args) {
 
 		VkApi vk = new VkApi(APP_ID);
+		
 		// http request
-		vk.sendReq("users.get.xml", "user_ids=18124036&fields=bdate,city");
+		vk.sendReq("users.get", "user_ids=18124036&fields=bdate,city");
 		
 		//*** https request 
 		vk.setAccessToken(ACCESS_TOKEN);
-		vk.sendReqS("users.search.xml", "q=Yakov%20Mamontov");	
+		vk.sendReqS("users.search", "q=Yakov%20Mamontov");	
 		
 	}
 }

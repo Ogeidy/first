@@ -63,11 +63,13 @@ public class VkApi {
 	}
 	
 	/** Sending request via HTTP without access token. */
-	public void sendReq(String method, String parameters){
+	public String sendReq(String method, String parameters){
 		//*** http request ***
+		
+		String data = null;
 		//Create socket, send request and receive reply
-		JSONParser parser = new JSONParser();
-		JSONObject resJson = new JSONObject();
+//		JSONParser parser = new JSONParser();
+//		JSONObject resJson = new JSONObject();
 		
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
@@ -84,20 +86,20 @@ public class VkApi {
 			
 			byte buf[] = new byte[64*1024];
 			int r = sock.getInputStream().read(buf);
-			String data = new String(buf, 0, r);
+			data = new String(buf, 0, r);
 			
 			data.indexOf("{");
 			
 			//System.out.println(data);
 			
-			try {
-				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
+//			} catch (ParseException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 			
-			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
+//			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
 			
 			sock.close();
 		}catch (MalformedURLException e) {
@@ -105,6 +107,8 @@ public class VkApi {
 		} catch (IOException e) {
 		     e.printStackTrace();
 		}
+		
+		return data.substring(data.indexOf("{"));
 	}
 	
 	/** Sending request via HTTPS using access token. */

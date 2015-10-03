@@ -1,5 +1,17 @@
 # Repository of the first module of VkBigData project.
 
+**VkBigDataDocs:** 
+
+**https://drive.google.com/folderview?id=0Byb56ryzpGORZmktX21JMi1TeFU&usp=sharing**
+
+--
+
+** Application Name: "BigData project"**
+
+** Application ID: "5075749" **
+
+**Some usefull links:**
+
 Git book: http://git-scm.com/book/ru/v1 
 
 VK API:   http://vk.com/dev/api_requests

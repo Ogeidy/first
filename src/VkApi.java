@@ -88,8 +88,6 @@ public class VkApi {
 			int r = sock.getInputStream().read(buf);
 			data = new String(buf, 0, r);
 			
-			data.indexOf("{");
-			
 			//System.out.println(data);
 			
 //			try {

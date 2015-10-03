@@ -1,4 +1,4 @@
-# My first repository
+# Repository of the first module of VkBigData project.
 
 Git book: http://git-scm.com/book/ru/v1 
 

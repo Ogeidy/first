@@ -7,9 +7,6 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  * This class realize some methods for connection with VK API.
@@ -64,12 +61,8 @@ public class VkApi {
 	
 	/** Sending request via HTTP without access token. */
 	public String sendReq(String method, String parameters){
-		//*** http request ***
 		
 		String data = null;
-		//Create socket, send request and receive reply
-//		JSONParser parser = new JSONParser();
-//		JSONObject resJson = new JSONObject();
 		
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
@@ -88,17 +81,6 @@ public class VkApi {
 			int r = sock.getInputStream().read(buf);
 			data = new String(buf, 0, r);
 			
-			//System.out.println(data);
-			
-//			try {
-//				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
-//			} catch (ParseException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-			
-//			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
-			
 			sock.close();
 		}catch (MalformedURLException e) {
 		     e.printStackTrace();
@@ -110,10 +92,9 @@ public class VkApi {
 	}
 	
 	/** Sending request via HTTPS using access token. */
-	public void sendReqS(String meth, String param){
-		//*** https request ***
-		JSONParser parser = new JSONParser();
-		JSONObject resJson = new JSONObject();
+	public String sendReqS(String meth, String param){
+		
+		String data = null;
 		
 		String reqUrl = API_REQUEST
 				.replace("{METHOD_NAME}", meth)
@@ -129,18 +110,7 @@ public class VkApi {
 			
 			byte buf[] = new byte[64*1024];
 			int r = con.getInputStream().read(buf);
-			String data = new String(buf, 0, r);
-			
-			//System.out.println(data);
-			
-			try {
-				resJson = (JSONObject)parser.parse(data.substring(data.indexOf("{")));
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			System.out.println(resJson.toString().replace(",", ",\n").replace("{", "{\n").replace("}", "\n}"));
+			data = new String(buf, 0, r);
 			
 			con.disconnect();
 			
@@ -148,6 +118,18 @@ public class VkApi {
 		     e.printStackTrace();
 		} catch (IOException e) {
 		     e.printStackTrace();
+		}
+		
+		check(data);
+		
+		return data;
+	}
+	
+	private void check(String data){
+		
+		if (data.contains("{\"error\":")){
+			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));
+			System.out.println("Error code: " + code);
 		}
 	}
 

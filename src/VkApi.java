@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -42,7 +43,7 @@ public class VkApi {
 		this.accessToken = accessToken;
 	}
 	
-	public void setAccessToken(String accessToken){
+	private void setAccessToken(String accessToken){
 		this.accessToken = accessToken;
 	}
 	
@@ -120,17 +121,40 @@ public class VkApi {
 		     e.printStackTrace();
 		}
 		
-		check(data);
+		// Warning! Here recursion is possible
+		if (check(data) == 1){
+			data = sendReqS(meth, param);
+		}
 		
 		return data;
 	}
 	
-	private void check(String data){
+	private int check(String data){
 		
 		if (data.contains("{\"error\":")){
 			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));
 			System.out.println("Error code: " + code);
+			
+			if (code == 5){
+				
+				System.out.println("Confirm your agreement to accessto some data, copy here access token form address line:");
+
+				try {
+					auth();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				Scanner in = new Scanner(System.in);
+				String indata = in.next();
+				setAccessToken(indata);
+				in.close();
+				
+				return 1;
+			}
 		}
+		
+		return 0;
 	}
 
 }

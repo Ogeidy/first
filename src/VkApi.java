@@ -1,5 +1,7 @@
 import java.awt.Desktop;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URISyntaxException;
@@ -78,9 +80,13 @@ public class VkApi {
 			
 			sock.getOutputStream().write(reqUrl.getBytes());
 			
-			byte buf[] = new byte[64*1024];
-			int r = sock.getInputStream().read(buf);
-			data = new String(buf, 0, r);
+			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+			if ((data = br.readLine()) != null){
+				String input;
+				while ((input = br.readLine()) != null){
+					data+=input;
+				}
+			}
 			
 			sock.close();
 		}catch (MalformedURLException e) {
@@ -109,9 +115,13 @@ public class VkApi {
 			
 			HttpsURLConnection con =(HttpsURLConnection)url.openConnection();
 			
-			byte buf[] = new byte[64*1024];
-			int r = con.getInputStream().read(buf);
-			data = new String(buf, 0, r);
+			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			if ((data = br.readLine()) != null){
+				String input;
+				while ((input = br.readLine()) != null){
+					data+=input;
+				}
+			}
 			
 			con.disconnect();
 			
@@ -130,6 +140,9 @@ public class VkApi {
 	}
 	
 	private int check(String data){
+		
+		if (data == null)
+			return 1;
 		
 		if (data.contains("{\"error\":")){
 			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));

@@ -95,17 +95,22 @@ public class VkApi {
 		     e.printStackTrace();
 		}
 		
+		// Warning! Here recursion is possible
+		if (check(data) == 1){
+			data = sendReqS(method, parameters);
+		}
+		
 		return data.substring(data.indexOf("{"));
 	}
 	
 	/** Sending request via HTTPS using access token. */
-	public String sendReqS(String meth, String param){
+	public String sendReqS(String method, String parameters){
 		
 		String data = null;
 		
 		String reqUrl = API_REQUEST
-				.replace("{METHOD_NAME}", meth)
-				.replace("{PARAMETERS}", param)
+				.replace("{METHOD_NAME}", method)
+				.replace("{PARAMETERS}", parameters)
 				.replace("{ACCESS_TOKEN}", accessToken);
 		
 		URL url;
@@ -115,7 +120,7 @@ public class VkApi {
 			
 			HttpsURLConnection con =(HttpsURLConnection)url.openConnection();
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(),"utf-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){
@@ -133,7 +138,7 @@ public class VkApi {
 		
 		// Warning! Here recursion is possible
 		if (check(data) == 1){
-			data = sendReqS(meth, param);
+			data = sendReqS(method, parameters);
 		}
 		
 		return data;

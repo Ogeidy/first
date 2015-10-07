@@ -13,6 +13,8 @@ public class VkDataLoader {
 	
 	public static void main(String[] args) throws IOException {
 		
+		// It's a testing!!!
+		
 		File file = new File("output.txt");
 		FileWriter wrt = new FileWriter(file);
 		VkApi vk = new VkApi(APP_ID, ACCESS_TOKEN);

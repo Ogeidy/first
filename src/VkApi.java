@@ -44,7 +44,10 @@ public class VkApi {
 		
 	}
 	
-	/** Authentication on VK server and getting access token. */
+	/**
+	 * Authentication on VK server and getting access token
+	 * @throws IOException
+	 */
 	public void auth() throws IOException{
 		String reqUrl = AUTH_URL
                 .replace("{APP_ID}", this.conf.APP_ID)
@@ -159,7 +162,7 @@ public class VkApi {
 	}
 	
 	/**
-	 * 
+	 * Checks response data from Vk server
 	 * @param data
 	 * @return 0: all ok;  1: user authorization failed; -1: other fails
 	 */

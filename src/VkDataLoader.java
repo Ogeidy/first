@@ -15,12 +15,15 @@ public class VkDataLoader {
 		File file = new File("output.txt");
 		FileWriter wrt = new FileWriter(file);
 		VkConfig conf = new VkConfig("config.txt");
-		VkApi vk = new VkApi(conf.APP_ID, conf.ACCESS_TOKEN);
+		
+		conf.readConfig();  //Reading config file
+		
+		VkApi vk = new VkApi(conf);
+		
 		String result = null;
 		JSONParser parser = new JSONParser();
 		JSONObject resJson = new JSONObject();
 		JSONArray array = new JSONArray();
-		
 		
 		// https request 
 		

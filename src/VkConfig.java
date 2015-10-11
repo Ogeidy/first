@@ -54,7 +54,7 @@ public class VkConfig {
 			 * new InputStreamReader(new FileInputStream(configFile),"utf-8")
 			 */
 			while ((s = cfgRd.readLine()) != null) {
-				System.out.println(s);
+//				System.out.println(s);
 				if (it == 0) {
 					APP_ID = s.substring(s.indexOf("=")+2);
 					it++;
@@ -72,7 +72,7 @@ public class VkConfig {
 					universities = new int[universityNum];
 					for (int i = 0; i < universityNum; i++) {
 						universities[i] = Integer.parseInt(cfgRd.readLine());
-						System.out.println(universities[i]);
+//						System.out.println(universities[i]);
 					}
 					it++;
 				}  else if ( it == 5) {
@@ -80,7 +80,7 @@ public class VkConfig {
 					try {
 						for (int i = 0; i < universityNum; i++) {
 							faculties[i] = (JSONObject)(new JSONParser()).parse(cfgRd.readLine());
-							System.out.println(faculties[i].toString());
+//							System.out.println(faculties[i].toString());
 						}
 					} catch (ParseException e) {
 						System.out.println("Error: Can't parse faculties Json");

@@ -83,7 +83,7 @@ public class VkApi {
 			
 			sock.getOutputStream().write(reqUrl.getBytes());
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream(),"utf-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){

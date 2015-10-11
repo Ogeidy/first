@@ -27,8 +27,9 @@ public class VkDataLoader {
 		
 		// https request 
 		
-//		result = vk.sendReqS("users.search", "university="+UNIVERSITY_ID+"&count=100");
-		result = vk.sendReqS("users.search", "university="+conf.UNIVERSITY_ID+"&fields=sex,bdate,country,city,home_town&count=100");	
+//		result = vk.sendReq("users.get","user_ids=142218715&fields=home_town");
+//		result = vk.sendReqS("users.search", "q=Mariya%20Kuznetsova&university="+conf.UNIVERSITY_ID+"&fields=sex,bdate,country,city,home_town&count=100");
+		result = vk.sendReqS("users.search", "university="+conf.universities[0]+"&fields=sex,bdate,country,city,home_town&count=100");	
 		
 		try {
 			resJson = (JSONObject)parser.parse(result);
@@ -45,6 +46,7 @@ public class VkDataLoader {
 		//printing
 		System.out.println(result);
 //		wrt.append(result+"\n");
+		
 		System.out.println("Count: "+((JSONObject)resJson.get("response")).get("count"));
 		wrt.append("Count: "+((JSONObject)resJson.get("response")).get("count")+"\n");
 		System.out.println("Number of items:" + array.size());

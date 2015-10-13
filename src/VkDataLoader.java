@@ -25,7 +25,7 @@ public class VkDataLoader {
 		// https request 
 		
 //		result = vk.sendReqS("users.search", "university="+UNIVERSITY_ID+"&count=100");
-		result = vk.sendReqS("users.search", "university="+conf.UNIVERSITY_ID+"&fields=sex,bdate,country,city,home_town&count=100");	
+		result = vk.sendReqS("users.search", "q=Leonid%20Borisevich&university="+conf.UNIVERSITY_ID+"&fields=sex,bdate,country,city,home_town&count=100");	
 		
 		try {
 			resJson = (JSONObject)parser.parse(result);

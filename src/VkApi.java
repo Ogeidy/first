@@ -12,13 +12,14 @@ import javax.net.ssl.HttpsURLConnection;
 
 
 /**
- * This class realize some methods for connection with VK API.
+ * Realize some methods for connection with VK API.
  * @author Yakov Mamontov
  *
  */
 public class VkApi {
 	
 	private String API_VERSION = "5.37";
+	private VkConfig conf;
 	
 	private String API_REQUEST = "https://api.vk.com/method/{METHOD_NAME}"
             + "?{PARAMETERS}"
@@ -32,27 +33,24 @@ public class VkApi {
             + "&scope={PERMISSIONS}"
             + "&response_type=token"
             + "&v=" + API_VERSION;
-            
-	private String accessToken;
-	private String appId;
 	
-	public VkApi(String appId){
-		this.appId = appId;
+	/**
+	 * Creates a new <code>VkApi</code> instance 
+	 * @param conf
+	 */
+	public VkApi(VkConfig conf){
+		
+		this.conf = conf;
+		
 	}
 	
-	public VkApi(String appId, String accessToken){
-		this.appId = appId;
-		this.accessToken = accessToken;
-	}
-	
-	private void setAccessToken(String accessToken){
-		this.accessToken = accessToken;
-	}
-	
-	/** Authentication on VK server and getting access token. */
+	/**
+	 * Authentication on VK server and getting access token
+	 * @throws IOException
+	 */
 	public void auth() throws IOException{
 		String reqUrl = AUTH_URL
-                .replace("{APP_ID}", this.appId)
+                .replace("{APP_ID}", this.conf.APP_ID)
                 .replace("{PERMISSIONS}", "photos,messages")
                 .replace("{DISPLAY}", "page");
         try {
@@ -62,7 +60,12 @@ public class VkApi {
         }
 	}
 	
-	/** Sending request via HTTP without access token. */
+	/**
+	 * Sending request via HTTP without access token.
+	 * @param method
+	 * @param parameters
+	 * @return
+	 */
 	public String sendReq(String method, String parameters){
 		
 		String data = null;
@@ -80,7 +83,7 @@ public class VkApi {
 			
 			sock.getOutputStream().write(reqUrl.getBytes());
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream(),"utf-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){
@@ -96,14 +99,23 @@ public class VkApi {
 		}
 		
 		// Warning! Here recursion is possible
-		if (check(data) == 1){
+		int checkVal = check(data);
+		if ( checkVal == 1){
 			data = sendReqS(method, parameters);
+		}
+		else if (checkVal == -1) {
+			System.exit(1);
 		}
 		
 		return data.substring(data.indexOf("{"));
 	}
 	
-	/** Sending request via HTTPS using access token. */
+	/**
+	 * Sending request via HTTPS using access token.
+	 * @param method
+	 * @param parameters
+	 * @return
+	 */
 	public String sendReqS(String method, String parameters){
 		
 		String data = null;
@@ -111,7 +123,7 @@ public class VkApi {
 		String reqUrl = API_REQUEST
 				.replace("{METHOD_NAME}", method)
 				.replace("{PARAMETERS}", parameters)
-				.replace("{ACCESS_TOKEN}", accessToken);
+				.replace("{ACCESS_TOKEN}", this.conf.ACCESS_TOKEN);
 		
 		URL url;
 		
@@ -137,13 +149,23 @@ public class VkApi {
 		}
 		
 		// Warning! Here recursion is possible
-		if (check(data) == 1){
+		int checkVal = check(data);
+		if ( checkVal == 1){
 			data = sendReqS(method, parameters);
+		}
+		else if (checkVal == -1) {
+			System.out.println("Program closed!");
+			System.exit(1);
 		}
 		
 		return data;
 	}
 	
+	/**
+	 * Checks response data from Vk server
+	 * @param data
+	 * @return 0: all ok;  1: user authorization failed; -1: other fails
+	 */
 	private int check(String data){
 		
 		if (data == null)
@@ -151,10 +173,10 @@ public class VkApi {
 		
 		if (data.contains("{\"error\":")){
 			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));
-			System.out.println("Error code: " + code);
+			System.out.print("Error code: " + code);
 			
 			if (code == 5){
-				
+				System.out.println(" User authorization failed!");
 				System.out.println("Confirm your agreement to accessto some data, copy here access token form address line:");
 
 				try {
@@ -165,10 +187,14 @@ public class VkApi {
 				
 				Scanner in = new Scanner(System.in);
 				String indata = in.next();
-				setAccessToken(indata);
+				conf.setAccessToken(indata);
 				in.close();
 				
 				return 1;
+			} 
+			else {
+				System.out.println();
+				return -1;
 			}
 		}
 		

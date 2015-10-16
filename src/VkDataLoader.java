@@ -6,7 +6,7 @@ public class VkDataLoader {
 	
 	public static void main(String[] args) {
 		
-		VkConfig conf = new VkConfig("config.txt");
+		VkConfig conf = new VkConfig("config_spbsu.txt");
 		conf.readConfig();  //Reading config file
 		
 		VkApi vk = new VkApi(conf);

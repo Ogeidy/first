@@ -43,7 +43,7 @@ public class VkDataLoader {
 					result = vk.sendReqS("users.search", "university="+Uni
 							+"&university_faculty="+idFct
 							+"&university_year="+k
-							+"&fields=home_town,universities,schools&count=1000");
+							+"&fields=home_town,universities,schools,sex&count=1000");
 					
 					long finish = System.currentTimeMillis();
 					int tm = (int)(finish-start);
@@ -122,7 +122,7 @@ public class VkDataLoader {
 									+"&university_year="+k
 //									+"&sex="+2
 									+"&university_chair="+idChr
-									+"&fields=home_town,universities,schools&count=1000");
+									+"&fields=home_town,universities,schools,sex&count=1000");
 							
 							finish = System.currentTimeMillis();
 							tm = (int)(finish-start);

@@ -27,6 +27,37 @@ public class VkPrint {
 	}
 	
 	/**
+	 * Prints <code>String</code> to file.
+	 * @param str
+	 * @return
+	 */
+	public int print(String str) {
+		
+		FileWriter wrtFile = null;
+		
+		try {
+			wrtFile = new FileWriter(outFile, true);
+		} catch (IOException e) {
+			System.out.println("Error: Can't open file!");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		
+		try {
+			wrtFile.append(str);
+			
+			wrtFile.flush();
+			wrtFile.close();
+		} catch (IOException e) {
+			System.out.println("Error: Can't write to file!");
+			e.printStackTrace();
+			System.exit(1);
+		}
+		
+		return 0;
+	}
+	
+	/**
 	 * Prints <code>result</code> to file.
 	 * @param result
 	 * @return
@@ -39,7 +70,7 @@ public class VkPrint {
 		JSONArray array = new JSONArray();
 		
 		try {
-			wrtFile = new FileWriter(outFile);
+			wrtFile = new FileWriter(outFile, true);
 		} catch (IOException e) {
 			System.out.println("Error: Can't open file!");
 			e.printStackTrace();
@@ -56,7 +87,7 @@ public class VkPrint {
 			System.exit(1);
 		}
 		
-		System.out.println(result);
+//		System.out.println(result);
 		System.out.println("Count: "+((JSONObject)resJson.get("response")).get("count"));
 		System.out.println("Number of items:" + array.size());
 		
@@ -72,7 +103,7 @@ public class VkPrint {
 		} catch (IOException e) {
 			System.out.println("Error: Can't write to file!");
 			e.printStackTrace();
-			System.exit(1);;
+			System.exit(1);
 		}
 		
 		return 0;

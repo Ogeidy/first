@@ -20,7 +20,7 @@ public class VkConfig {
 	public String APP_ID;
 	public String ACCESS_TOKEN;
 	public int universityNum;
-	public int[] universities;
+	public JSONObject[] universities;
 	public int yearFrom;
 	public int yearTo;
 	public JSONObject[] faculties;
@@ -69,10 +69,16 @@ public class VkConfig {
 					it++;
 				} else if ( it == 4) {
 					universityNum = Integer.parseInt(s.substring(s.indexOf("=")+2));
-					universities = new int[universityNum];
-					for (int i = 0; i < universityNum; i++) {
-						universities[i] = Integer.parseInt(cfgRd.readLine());
-//						System.out.println(universities[i]);
+					universities = new JSONObject[universityNum];
+					try {
+						for (int i = 0; i < universityNum; i++) {
+							universities[i] = (JSONObject)(new JSONParser()).parse(cfgRd.readLine());
+	//						System.out.println(universities[i]);
+						}
+					} catch (ParseException e) {
+						System.out.println("Error: Can't parse universities Json");
+						e.printStackTrace();
+						System.exit(1);
 					}
 					it++;
 				}  else if ( it == 5) {

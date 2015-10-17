@@ -24,6 +24,10 @@ public class VkDataLoader {
 		//printing
 //		prnt.printResult(result);	
 		
+		long startTime;
+		JSONParser parser = new JSONParser();
+		JSONObject resJson = new JSONObject();
+		
 		for (int i = 0; i < conf.universityNum; i++) {
 			
 			int Uni = Integer.parseInt(conf.universities[i].get("id").toString());
@@ -38,28 +42,15 @@ public class VkDataLoader {
 					
 					System.out.println("i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
 					
-					long start = System.currentTimeMillis();
+					startTime = System.currentTimeMillis();
 					
 					result = vk.sendReqS("users.search", "university="+Uni
 							+"&university_faculty="+idFct
 							+"&university_year="+k
 							+"&fields=home_town,universities,schools,sex&count=1000");
 					
-					long finish = System.currentTimeMillis();
-					int tm = (int)(finish-start);
-					System.out.println("Time:"+tm+"ms");
-					
 					// Check the VK timeouts
-					if (tm < 340) {
-						try {
-							Thread.sleep(340 - tm);
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
-					}
-					
-					JSONParser parser = new JSONParser();
-					JSONObject resJson = new JSONObject();
+					checkTime(startTime);
 					
 					try {
 						resJson = (JSONObject)parser.parse(result);
@@ -79,23 +70,12 @@ public class VkDataLoader {
 					} 
 					else {
 						
-						start = System.currentTimeMillis();
+						startTime = System.currentTimeMillis();
 						
 						result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
-						//prnt.printResult(result);
-						
-						finish = System.currentTimeMillis();
-						tm = (int)(finish-start);
-						System.out.println("Time:"+tm+"ms");
 						
 						// Check the VK timeouts
-						if (tm < 340) {
-							try {
-								Thread.sleep(340 - tm);
-							} catch (InterruptedException e) {
-								e.printStackTrace();
-							}
-						}
+						checkTime(startTime);
 						
 						try {
 							resJson = (JSONObject)parser.parse(result);
@@ -115,27 +95,16 @@ public class VkDataLoader {
 							
 							System.out.println("ID Chair:"+idChr);
 							
-							start = System.currentTimeMillis();
+							startTime = System.currentTimeMillis();
 							
 							result = vk.sendReqS("users.search", "university="+Uni
 									+"&university_faculty="+idFct
 									+"&university_year="+k
-//									+"&sex="+2
 									+"&university_chair="+idChr
 									+"&fields=home_town,universities,schools,sex&count=1000");
 							
-							finish = System.currentTimeMillis();
-							tm = (int)(finish-start);
-							System.out.println("Time:"+tm+"ms");
-							
 							// Check the VK timeouts
-							if (tm < 340) {
-								try {
-									Thread.sleep(340 - tm);
-								} catch (InterruptedException e) {
-									e.printStackTrace();
-								}
-							}
+							checkTime(startTime);
 							
 							prnt.print("\nUniversity: "+conf.universities[i].toString()
 									+" Year: "+k
@@ -146,6 +115,26 @@ public class VkDataLoader {
 						
 					}
 				}
+			}
+		}
+		
+	}
+	
+	/**
+	 * Check the VK timeouts
+	 * @param startTime
+	 */
+	private static void checkTime(long startTime) {
+		
+		long finish = System.currentTimeMillis();
+		int time = (int)(finish-startTime);
+		System.out.println("Time:"+time+"ms");
+		
+		if (time < 340) {
+			try {
+				Thread.sleep(340 - time);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
 		}
 		

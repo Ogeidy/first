@@ -1,0 +1,25 @@
+
+University: {"id":56,"title":"СПбПУ Петра Великого (Политех)"} Year: 2000 Faculty:{"id":7426,"title":"Высшая инженерная школа"}
+Count: 0
+Number of items:0
+Items:
+
+University: {"id":56,"title":"СПбПУ Петра Великого (Политех)"} Year: 2001 Faculty:{"id":7426,"title":"Высшая инженерная школа"}
+Count: 0
+Number of items:0
+Items:
+
+University: {"id":56,"title":"СПбПУ Петра Великого (Политех)"} Year: 2002 Faculty:{"id":7426,"title":"Высшая инженерная школа"}
+Count: 0
+Number of items:0
+Items:
+
+University: {"id":56,"title":"СПбПУ Петра Великого (Политех)"} Year: 2003 Faculty:{"id":7426,"title":"Высшая инженерная школа"}
+Count: 0
+Number of items:0
+Items:
+
+University: {"id":56,"title":"СПбПУ Петра Великого (Политех)"} Year: 2004 Faculty:{"id":7426,"title":"Высшая инженерная школа"}
+Count: 0
+Number of items:0
+Items:

@@ -87,7 +87,7 @@ public class VkPrint {
 			System.exit(1);
 		}
 		
-//		System.out.println(result);
+		System.out.println(result);
 		System.out.println("Count: "+((JSONObject)resJson.get("response")).get("count"));
 		System.out.println("Number of items:" + array.size());
 		

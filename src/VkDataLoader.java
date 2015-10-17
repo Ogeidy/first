@@ -21,6 +21,7 @@ public class VkDataLoader {
 	public static void main(String[] args) throws IOException {
 		
 		// It's a testing!!!
+		// This string for testing =)
 		
 		File file = new File("output.txt");
 		FileWriter wrt = new FileWriter(file);

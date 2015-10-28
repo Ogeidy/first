@@ -1,3 +1,4 @@
+package com.spbpu.vkbigdata.dataloader;
 import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.IOException;

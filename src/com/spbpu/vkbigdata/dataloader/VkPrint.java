@@ -1,3 +1,4 @@
+package com.spbpu.vkbigdata.dataloader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

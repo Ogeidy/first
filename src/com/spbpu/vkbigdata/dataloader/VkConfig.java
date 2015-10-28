@@ -1,3 +1,4 @@
+package com.spbpu.vkbigdata.dataloader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;

@@ -15,23 +15,37 @@
         <dependency>
             <groupId>json.simple</groupId>
             <artifactId>json.simple</artifactId>
-            <version>1.1</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/json-simple-1.1.jar</systemPath>
+            <version>1.1.1</version>
         </dependency>
     </dependencies>
-
+    <repositories>
+        <repository>
+            <id>project-repo</id>
+            <url>file://${basedir}/lib</url>
+        </repository>
+    </repositories>
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>org.dstovall</groupId>
+                    <artifactId>onejar-maven-plugin</artifactId>
+                    <version>1.4.4</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>one-jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.4</version>
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.spbpu.vkbigdata.dataloader.VkDataLoader</mainClass>
+                                <mainClass>main.java.com.vkbigdata.vkdataloader.VkDataLoader</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
@@ -39,5 +53,10 @@
             </plugins>
         </pluginManagement>
     </build>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>onejar-maven-plugin.googlecode.com</id>
+            <url>http://onejar-maven-plugin.googlecode.com/svn/mavenrepo</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

@@ -4,13 +4,16 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-// For testing limitations
 
 public class VkDataLoader {
 	
+	private static String CONFIG_FILE = "config_spbsu.txt";
+	
+	private static String OUT_FILE_PREFIX = "output-";
+	
 	public static void main(String[] args) {
 		
-		VkConfig conf = new VkConfig("config_spbsu.txt");
+		VkConfig conf = new VkConfig(CONFIG_FILE);
 		conf.readConfig();  //Reading config file
 		
 		VkApi vk = new VkApi(conf);
@@ -25,7 +28,7 @@ public class VkDataLoader {
 
 			int Uni = Integer.parseInt(conf.universities[i].get("id").toString());
 			int numFcts = Integer.parseInt(((JSONObject)conf.faculties[i].get("response")).get("count").toString());
-			prnt = new VkPrint("output-"+Uni+".txt");
+			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt");
 			
 			for (int j = 0; j < numFcts; j++){
 				

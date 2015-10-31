@@ -21,9 +21,26 @@ public class VkNoLimitThread implements Runnable {
 	public void run() {
 		
 		String result;
+		long startTime, stopTime;
 		
-		result = vk.sendReqS(reqs[0][0], reqs[0][1]);
-		prnt.log(result);
+		synchronized(this) {
+			startTime = System.currentTimeMillis();
+			
+			result = vk.sendReqS(reqs[0][0], reqs[0][1]);
+			prnt.log(result);
+			
+			//Check time limit
+			stopTime = System.currentTimeMillis();
+			int time = (int)(stopTime-startTime);
+			prnt.log("[VkNoLimitThread] Time:"+time+"ms");
+			if (time < 340) {
+				try {
+					Thread.sleep(340 - time);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		
 	}
 

@@ -7,23 +7,29 @@ import org.json.simple.parser.ParseException;
 public class VkDataLoader {
 	
 	private static String CONFIG_FILE = "config_spbsu.txt";
-	
 	private static String OUT_FILE_PREFIX = "output-";
-	
 	private static String LOG_FILE = "VkDataLoader.log";
+	
+	private static VkConfig conf;
+	private static VkApi vk;
+	private static VkPrint prnt;
+	private static VkNoLimitThread noLimit;
+	
+	
 	
 	public static void main(String[] args) {
 		
-		VkConfig conf = new VkConfig(CONFIG_FILE);
+		conf = new VkConfig(CONFIG_FILE);
 		conf.readConfig();  //Reading config file
+		vk = new VkApi(conf);
+		noLimit = new VkNoLimitThread(vk, prnt);
 		
-		VkApi vk = new VkApi(conf);
-		VkPrint prnt;// = new VkPrint("output.txt");
-		String result = null;	
-		
-		long startTime;
 		JSONParser parser = new JSONParser();
 		JSONObject resJson = new JSONObject();
+		String result = null;	
+		long startTime;
+		
+		new Thread(noLimit).start();
 		
 		for (int i = 0; i < conf.universityNum; i++) {
 
@@ -38,15 +44,17 @@ public class VkDataLoader {
 				
 				for (int k = conf.yearFrom; k <= conf.yearTo; k++) {      
 					
-					prnt.log("----------------------------");
-					prnt.log("**i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
-					
-					startTime = System.currentTimeMillis();
-					result = vk.sendReqS("users.search", "university="+Uni
-							+"&university_faculty="+idFct
-							+"&university_year="+k
-							+"&fields=home_town,universities,schools,sex&count=1000");
-					checkTime(startTime);
+					synchronized(noLimit) {
+						prnt.log("----------------------------");
+						prnt.log("**i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
+						
+						startTime = System.currentTimeMillis();
+						result = vk.sendReqS("users.search", "university="+Uni
+								+"&university_faculty="+idFct
+								+"&university_year="+k
+								+"&fields=home_town,universities,schools,sex&count=1000");
+						checkTime(startTime);
+					}
 					
 					try {
 						resJson = (JSONObject)parser.parse(result);
@@ -65,10 +73,11 @@ public class VkDataLoader {
 						prnt.printResult(result);
 					} 
 					else {
-						
-						startTime = System.currentTimeMillis();
-						result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
-						checkTime(startTime);
+						synchronized(noLimit) {
+							startTime = System.currentTimeMillis();
+							result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
+							checkTime(startTime);
+						}
 						
 						try {
 							resJson = (JSONObject)parser.parse(result);
@@ -86,16 +95,18 @@ public class VkDataLoader {
 							
 							int idChr = Integer.parseInt(((JSONObject)arrChrs.get(z)).get("id").toString());
 							
-							prnt.log("^^^^");
-							prnt.log("*ID Chair:"+idChr);
-							
-							startTime = System.currentTimeMillis();
-							result = vk.sendReqS("users.search", "university="+Uni
-									+"&university_faculty="+idFct
-									+"&university_year="+k
-									+"&university_chair="+idChr
-									+"&fields=home_town,universities,schools,sex&count=1000");
-							checkTime(startTime);
+							synchronized(noLimit) {
+								prnt.log("^^^^");
+								prnt.log("*ID Chair:"+idChr);
+								
+								startTime = System.currentTimeMillis();
+								result = vk.sendReqS("users.search", "university="+Uni
+										+"&university_faculty="+idFct
+										+"&university_year="+k
+										+"&university_chair="+idChr
+										+"&fields=home_town,universities,schools,sex&count=1000");
+								checkTime(startTime);
+							}
 							
 							prnt.print("\nUniversity: "+conf.universities[i].toString()
 									+" Year: "+k
@@ -119,11 +130,11 @@ public class VkDataLoader {
 		
 		long finish = System.currentTimeMillis();
 		int time = (int)(finish-startTime);
-		System.out.println("Time:"+time+"ms");
+		prnt.log("Time:"+time+"ms");
 		
-		if (time < 940) {
+		if (time < 340) {
 			try {
-				Thread.sleep(940 - time);
+				Thread.sleep(340 - time);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

@@ -1,3 +1,4 @@
+package main.java.com.vkbigdata.vkdataloader;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

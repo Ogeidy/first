@@ -1,2 +1,297 @@
 ----------------------------
 **i:0 j:0 k:2015 ID Fct:1
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3548ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3828ms
+Time:56ms
+^^^^
+*ID Chair:1
+Time:1801ms
+^^^^
+*ID Chair:2
+Time:1112ms
+^^^^
+*ID Chair:3
+Time:630ms
+^^^^
+*ID Chair:4
+Time:652ms
+^^^^
+*ID Chair:5
+Time:499ms
+^^^^
+*ID Chair:6
+Time:162ms
+^^^^
+*ID Chair:7
+Time:187ms
+^^^^
+*ID Chair:8
+Time:189ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:4073ms
+Time:273ms
+^^^^
+*ID Chair:1
+Time:1555ms
+^^^^
+*ID Chair:2
+Time:1672ms
+^^^^
+*ID Chair:3
+Time:810ms
+^^^^
+*ID Chair:4
+Time:329ms
+^^^^
+*ID Chair:5
+Time:300ms
+^^^^
+*ID Chair:6
+Time:179ms
+^^^^
+*ID Chair:7
+Time:199ms
+^^^^
+*ID Chair:8
+Time:201ms
+^^^^
+*ID Chair:9
+Time:99ms
+^^^^
+*ID Chair:10
+Time:315ms
+^^^^
+*ID Chair:12
+Time:160ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:1760ms
+Time:102ms
+^^^^
+*ID Chair:1
+Time:1603ms
+^^^^
+*ID Chair:2
+Time:1033ms
+^^^^
+*ID Chair:3
+Time:587ms
+^^^^
+*ID Chair:4
+Time:380ms
+^^^^
+*ID Chair:5
+Time:251ms
+^^^^
+*ID Chair:6
+Time:113ms
+^^^^
+*ID Chair:7
+Time:181ms
+^^^^
+*ID Chair:8
+Time:179ms
+^^^^
+*ID Chair:9
+Time:140ms
+^^^^
+*ID Chair:10
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:1943ms
+Time:279ms
+^^^^
+*ID Chair:1
+Time:1813ms
+^^^^
+*ID Chair:2
+Time:2350ms
+^^^^
+*ID Chair:3
+Time:949ms
+^^^^
+*ID Chair:4
+Time:733ms
+^^^^
+*ID Chair:5
+Time:601ms
+^^^^
+*ID Chair:6
+Time:295ms
+^^^^
+*ID Chair:7
+Time:237ms
+^^^^
+*ID Chair:8
+Time:398ms
+^^^^
+*ID Chair:9
+Time:168ms
+^^^^
+*ID Chair:10
+Time:324ms
+^^^^
+*ID Chair:12
+Time:94ms
+^^^^
+*ID Chair:13
+Time:152ms
+^^^^
+*ID Chair:14
+Time:202ms
+^^^^
+*ID Chair:15
+Time:110ms
+^^^^
+*ID Chair:16
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3444ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3344ms
+Time:21157ms
+^^^^
+*ID Chair:1
+Time:1811ms
+^^^^
+*ID Chair:2
+Time:1087ms
+^^^^
+*ID Chair:3
+Time:661ms
+^^^^
+*ID Chair:4
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:24578ms
+Time:172ms
+^^^^
+*ID Chair:1
+Time:1748ms
+^^^^
+*ID Chair:2
+Time:1129ms
+^^^^
+*ID Chair:3
+Time:636ms
+^^^^
+*ID Chair:4
+Time:407ms
+^^^^
+*ID Chair:5
+Time:320ms
+^^^^
+*ID Chair:6
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:2623ms
+Time:159ms
+^^^^
+*ID Chair:1
+Time:1728ms
+^^^^
+*ID Chair:2
+Time:1031ms
+^^^^
+*ID Chair:3
+Time:573ms
+^^^^
+*ID Chair:4
+Time:380ms
+^^^^
+*ID Chair:5
+Time:381ms
+^^^^
+*ID Chair:6
+Time:168ms
+^^^^
+*ID Chair:7
+Time:218ms
+^^^^
+*ID Chair:8
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3534ms
+{"response":{"count":7,"items":[{"id":29178269,"title":"Правила общения в группе","created":1386971739,"created_by":101,"updated":1386971739,"updated_by":-1061,"is_closed":1,"is_fixed":1,"comments":1},{"id":29257709,"title":"Вопросы по учёбе","created":1388392186,"created_by":101,"updated":1445598690,"updated_by":10962219,"is_closed":0,"is_fixed":1,"comments":771},{"id":29824425,"title":"Вопросы по поступлению","created":1397289458,"created_by":55835919,"updated":1446039232,"updated_by":25632438,"is_closed":0,"is_fixed":1,"comments":1742},{"id":29527837,"title":"Потеряшки или Бюро находок","created":1392709299,"created_by":34133281,"updated":1444826658,"updated_by":5239654,"is_closed":0,"is_fixed":1,"comments":36},{"id":29301051,"title":"Помогите с выбором","created":1389204668,"created_by":37737695,"updated":1446292428,"updated_by":25918106,"is_closed":0,"is_fixed":0,"comments":108},{"id":32616497,"title":"Вакансии для студентов","created":1443831392,"created_by":101,"updated":1446200294,"updated_by":1958481,"is_closed":0,"is_fixed":0,"comments":20},{"id":30137669,"title":"общежитие","created":1402372374,"created_by":73515010,"updated":1445165565,"updated_by":309196761,"is_closed":0,"is_fixed":0,"comments":463}],"default_order":1.000000,"can_add_topics":0}}
+[VkNoLimitThread] Time:178ms
+Time:136ms
+^^^^
+*ID Chair:1
+Time:2251ms
+^^^^
+*ID Chair:2
+Time:1295ms
+^^^^
+*ID Chair:3
+Time:626ms
+^^^^
+*ID Chair:4
+Time:381ms
+^^^^
+*ID Chair:5
+Time:264ms
+^^^^
+*ID Chair:6
+Time:181ms
+^^^^
+*ID Chair:7
+Time:217ms
+^^^^
+*ID Chair:8
+Time:263ms
+^^^^
+*ID Chair:9
+Time:203ms
+^^^^
+*ID Chair:10
+Time:216ms
+^^^^
+*ID Chair:12
+Time:462ms
+^^^^
+*ID Chair:13
+Time:166ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:3401ms
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:98088ms
+{"response":{"text":"King Cunta"}}
+[VkNoLimitThread] Time:154ms
+Time:167ms
+^^^^
+*ID Chair:1
+Time:22856ms
+^^^^
+*ID Chair:2
+Time:1033ms
+^^^^
+*ID Chair:3
+Time:562ms
+^^^^
+*ID Chair:4
+Time:422ms
+^^^^
+*ID Chair:5
+Time:350ms
+^^^^
+*ID Chair:6
+----------------------------
+**i:0 j:0 k:2015 ID Fct:1
+Time:27136ms
+status.get  user_id=5592362
+{"response":{"text":"King Cunta"}}
+[VkNoLimitThread] Time:287ms
+Time:177ms
+^^^^
+*ID Chair:1
+Time:1559ms
+^^^^
+*ID Chair:2

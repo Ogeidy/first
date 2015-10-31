@@ -22,6 +22,7 @@ public class VkDataLoader {
 		conf = new VkConfig(CONFIG_FILE);
 		conf.readConfig();  //Reading config file
 		vk = new VkApi(conf);
+		prnt = new VkPrint(OUT_FILE_PREFIX+".txt", LOG_FILE);
 		noLimit = new VkNoLimitThread(vk, prnt);
 		
 		JSONParser parser = new JSONParser();
@@ -29,6 +30,7 @@ public class VkDataLoader {
 		String result = null;	
 		long startTime;
 		
+		// Start the parallel thread
 		new Thread(noLimit).start();
 		
 		for (int i = 0; i < conf.universityNum; i++) {

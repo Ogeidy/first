@@ -8,7 +8,7 @@ public class VkNoLimitThread implements Runnable {
 							{"status.get", "user_id=5592362"},
 							{"status.get", "group_id=42184737"},
 							{"audio.get", "owner_id=-42184737&count=10"},
-							{"audio.search", "q=25/17&count=17"},
+							{"audio.search", "q=acdc&count=17"},
 							{"groups.search", "q=Sport&count=28"},
 							{"board.getTopics", "group_id=1061&count=50"}};
 	
@@ -23,10 +23,12 @@ public class VkNoLimitThread implements Runnable {
 		String result;
 		long startTime, stopTime;
 		
-		synchronized(this) {
+		synchronized(VkNoLimitThread.this) {
 			startTime = System.currentTimeMillis();
 			
-			result = vk.sendReqS(reqs[0][0], reqs[0][1]);
+			prnt.log(reqs[1][0]+"  "+ reqs[1][1]);
+			
+			result = vk.sendReqS(reqs[1][0], reqs[1][1]);
 			prnt.log(result);
 			
 			//Check time limit

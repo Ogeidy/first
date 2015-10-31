@@ -17,6 +17,8 @@ public class VkPrint {
 	
 	private File outFile;
 	
+	private File logFile;
+	
 	/**
 	 * Creates a new <code>VkPrint</code> instance.
 	 * @param fileName
@@ -24,7 +26,57 @@ public class VkPrint {
 	public VkPrint(String fileName) {
 		
 		this.outFile = new File(fileName);
+		this.logFile = null;
 		
+	}
+	
+	/**
+	 * Creates a new <code>VkPrint</code> instance.
+	 * @param fileName
+	 * @param logName
+	 */
+	public VkPrint(String fileName, String logName) {
+		
+		this.outFile = new File(fileName);
+		this.logFile = new File(logName);
+		
+	}
+	
+	/**
+	 * Prints <code>String</code> to log file.
+	 * @param str
+	 * @return
+	 */
+	public int log(String str) {
+		
+		System.out.println(str);
+		
+		if (logFile != null) {
+		
+			FileWriter wrtFile = null;
+			
+			try {
+				wrtFile = new FileWriter(logFile, true);
+			} catch (IOException e) {
+				System.out.println("Error: Can't open log file!");
+				e.printStackTrace();
+				System.exit(1);
+			}
+			
+			try {
+				wrtFile.append(str+"\n");
+				wrtFile.flush();
+				wrtFile.close();
+			} catch (IOException e) {
+				System.out.println("Error: Can't write to file!");
+				e.printStackTrace();
+				System.exit(1);
+			}
+			
+			return 0;
+		}
+		
+		return 1;
 	}
 	
 	/**
@@ -46,7 +98,6 @@ public class VkPrint {
 		
 		try {
 			wrtFile.append(str);
-			
 			wrtFile.flush();
 			wrtFile.close();
 		} catch (IOException e) {
@@ -88,7 +139,7 @@ public class VkPrint {
 			System.exit(1);
 		}
 		
-		System.out.println(result);
+		//System.out.println(result);
 		System.out.println("Count: "+((JSONObject)resJson.get("response")).get("count"));
 		System.out.println("Number of items:" + array.size());
 		

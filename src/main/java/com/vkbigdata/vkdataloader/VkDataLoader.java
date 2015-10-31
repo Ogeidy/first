@@ -10,6 +10,8 @@ public class VkDataLoader {
 	
 	private static String OUT_FILE_PREFIX = "output-";
 	
+	private static String LOG_FILE = "VkDataLoader.log";
+	
 	public static void main(String[] args) {
 		
 		VkConfig conf = new VkConfig(CONFIG_FILE);
@@ -27,7 +29,7 @@ public class VkDataLoader {
 
 			int Uni = Integer.parseInt(conf.universities[i].get("id").toString());
 			int numFcts = Integer.parseInt(((JSONObject)conf.faculties[i].get("response")).get("count").toString());
-			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt");
+			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt", LOG_FILE);
 			
 			for (int j = 0; j < numFcts; j++){
 				
@@ -36,8 +38,8 @@ public class VkDataLoader {
 				
 				for (int k = conf.yearFrom; k <= conf.yearTo; k++) {      
 					
-					System.out.println("----------------------------");
-					System.out.println("**i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
+					prnt.log("----------------------------");
+					prnt.log("**i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
 					
 					startTime = System.currentTimeMillis();
 					result = vk.sendReqS("users.search", "university="+Uni
@@ -49,7 +51,7 @@ public class VkDataLoader {
 					try {
 						resJson = (JSONObject)parser.parse(result);
 					} catch (ParseException e) {
-						System.out.println("Error: Can't parse the response!");
+						prnt.log("Error: Can't parse the response!");
 						e.printStackTrace();
 						System.exit(1);
 					}
@@ -72,7 +74,7 @@ public class VkDataLoader {
 							resJson = (JSONObject)parser.parse(result);
 							
 						} catch (ParseException e) {
-							System.out.println("Error: Can't parse the response!");
+							prnt.log("Error: Can't parse the response!");
 							e.printStackTrace();
 							System.exit(1);
 						}
@@ -84,8 +86,8 @@ public class VkDataLoader {
 							
 							int idChr = Integer.parseInt(((JSONObject)arrChrs.get(z)).get("id").toString());
 							
-							System.out.println("^^^^");
-							System.out.println("*ID Chair:"+idChr);
+							prnt.log("^^^^");
+							prnt.log("*ID Chair:"+idChr);
 							
 							startTime = System.currentTimeMillis();
 							result = vk.sendReqS("users.search", "university="+Uni

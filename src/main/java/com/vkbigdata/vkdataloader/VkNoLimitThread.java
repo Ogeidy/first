@@ -6,7 +6,7 @@ public class VkNoLimitThread extends Thread {
 	
 	private VkApi vk;
 	private VkPrint prnt;
-	private int NUM = 6;  //Size of reqs array
+	private int NUM = 18;  //Size of reqs array
 	private String reqs[][] = {{"friends.getOnline", "user_id=1&count=5"},
 							{"status.get", "user_id=5592362"},
 							{"status.get", "user_id=169902419"},

@@ -1,14 +1,17 @@
 package main.java.com.vkbigdata.vkdataloader;
 
-public class VkNoLimitThread implements Runnable {
+import java.util.Random;
+
+public class VkNoLimitThread extends Thread {
 	
 	private VkApi vk;
 	private VkPrint prnt;
+	private int NUM = 6;  //Size of reqs array
 	private String reqs[][] = {{"friends.getOnline", "user_id=1&count=5"},
 							{"status.get", "user_id=5592362"},
 							{"status.get", "group_id=42184737"},
-							{"audio.get", "owner_id=-42184737&count=10"},
-							{"audio.search", "q=acdc&count=17"},
+							{"audio.get", "owner_id=5592362&count=10"},
+							{"audio.search", "q=NoiseMC&count=17"},
 							{"groups.search", "q=Sport&count=28"},
 							{"board.getTopics", "group_id=1061&count=50"}};
 	
@@ -19,29 +22,37 @@ public class VkNoLimitThread implements Runnable {
 
 	@Override
 	public void run() {
-		
-		String result;
+
 		long startTime, stopTime;
-		
-		synchronized(VkNoLimitThread.this) {
-			startTime = System.currentTimeMillis();
+		Random rand = new Random();
+		while (!Thread.interrupted()) {
 			
-			prnt.log(reqs[1][0]+"  "+ reqs[1][1]);
+			int i = rand.nextInt(NUM);
+			int timeSleep = (int) (700+rand.nextGaussian()*100);
 			
-			result = vk.sendReqS(reqs[1][0], reqs[1][1]);
-			prnt.log(result);
-			
-			//Check time limit
-			stopTime = System.currentTimeMillis();
-			int time = (int)(stopTime-startTime);
-			prnt.log("[VkNoLimitThread] Time:"+time+"ms");
-			if (time < 340) {
-				try {
-					Thread.sleep(340 - time);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+			synchronized(VkNoLimitThread.this) {
+				startTime = System.currentTimeMillis();
+				vk.sendReqS(reqs[i][0], reqs[i][1]);
+				
+				//Check time limit
+				stopTime = System.currentTimeMillis();
+				int time = (int)(stopTime-startTime);
+				prnt.log("[VkNoLimitThread] Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
+				if (time < 340) {
+					try {
+						Thread.sleep(340 - time);
+					} catch (InterruptedException e) {
+						return;
+					}
 				}
 			}
+			
+			try {
+				Thread.sleep(timeSleep);
+			} catch (InterruptedException e) {
+				return;
+			}
+			
 		}
 		
 	}

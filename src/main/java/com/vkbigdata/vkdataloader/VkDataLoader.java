@@ -31,7 +31,7 @@ public class VkDataLoader {
 		long startTime;
 		
 		// Start the parallel thread
-		new Thread(noLimit).start();
+		noLimit.start();
 		
 		for (int i = 0; i < conf.universityNum; i++) {
 
@@ -78,6 +78,7 @@ public class VkDataLoader {
 						synchronized(noLimit) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
+							prnt.log("Getted chairs");
 							checkTime(startTime);
 						}
 						
@@ -121,6 +122,9 @@ public class VkDataLoader {
 				}
 			}
 		}
+		
+		// Stop the parallel thread
+		noLimit.interrupt();
 		
 	}
 	

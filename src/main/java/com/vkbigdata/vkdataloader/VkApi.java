@@ -52,7 +52,7 @@ public class VkApi {
 	public void auth() throws IOException{
 		String reqUrl = AUTH_URL
                 .replace("{APP_ID}", this.conf.APP_ID)
-                .replace("{PERMISSIONS}", "photos,messages,audio,status,groups")
+                .replace("{PERMISSIONS}", "photos,messages,audio,status,groups,friends")
                 .replace("{DISPLAY}", "page");
         try {
             Desktop.getDesktop().browse(new URL(reqUrl).toURI());

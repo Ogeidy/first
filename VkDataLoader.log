@@ -1,297 +1,231 @@
 ----------------------------
 **i:0 j:0 k:2015 ID Fct:1
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3548ms
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3828ms
-Time:56ms
+Time:3913ms
+[VkNoLimitThread] Slipped: 691, Num: 5, Time: 95ms
+Getted chairs
+Time:118ms
 ^^^^
 *ID Chair:1
-Time:1801ms
+Time:2002ms
+[VkNoLimitThread] Slipped: 789, Num: 3, Time: 100ms
 ^^^^
 *ID Chair:2
-Time:1112ms
+Time:1068ms
+[VkNoLimitThread] Slipped: 787, Num: 2, Time: 75ms
 ^^^^
 *ID Chair:3
-Time:630ms
+Time:851ms
+[VkNoLimitThread] Slipped: 652, Num: 3, Time: 182ms
 ^^^^
 *ID Chair:4
-Time:652ms
+Time:513ms
 ^^^^
 *ID Chair:5
-Time:499ms
+Time:261ms
+[VkNoLimitThread] Slipped: 829, Num: 0, Time: 69ms
 ^^^^
 *ID Chair:6
-Time:162ms
+Time:139ms
 ^^^^
 *ID Chair:7
-Time:187ms
+Time:192ms
 ^^^^
 *ID Chair:8
-Time:189ms
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:4073ms
-Time:273ms
-^^^^
-*ID Chair:1
-Time:1555ms
-^^^^
-*ID Chair:2
-Time:1672ms
-^^^^
-*ID Chair:3
-Time:810ms
-^^^^
-*ID Chair:4
-Time:329ms
-^^^^
-*ID Chair:5
-Time:300ms
-^^^^
-*ID Chair:6
-Time:179ms
-^^^^
-*ID Chair:7
-Time:199ms
-^^^^
-*ID Chair:8
-Time:201ms
+Time:212ms
+[VkNoLimitThread] Slipped: 741, Num: 5, Time: 167ms
 ^^^^
 *ID Chair:9
-Time:99ms
+Time:117ms
 ^^^^
 *ID Chair:10
-Time:315ms
+Time:186ms
 ^^^^
 *ID Chair:12
-Time:160ms
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:1760ms
-Time:102ms
-^^^^
-*ID Chair:1
-Time:1603ms
-^^^^
-*ID Chair:2
-Time:1033ms
-^^^^
-*ID Chair:3
-Time:587ms
-^^^^
-*ID Chair:4
-Time:380ms
-^^^^
-*ID Chair:5
-Time:251ms
-^^^^
-*ID Chair:6
-Time:113ms
-^^^^
-*ID Chair:7
-Time:181ms
-^^^^
-*ID Chair:8
-Time:179ms
-^^^^
-*ID Chair:9
-Time:140ms
-^^^^
-*ID Chair:10
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:1943ms
-Time:279ms
-^^^^
-*ID Chair:1
-Time:1813ms
-^^^^
-*ID Chair:2
-Time:2350ms
-^^^^
-*ID Chair:3
-Time:949ms
-^^^^
-*ID Chair:4
-Time:733ms
-^^^^
-*ID Chair:5
-Time:601ms
-^^^^
-*ID Chair:6
-Time:295ms
-^^^^
-*ID Chair:7
-Time:237ms
-^^^^
-*ID Chair:8
-Time:398ms
-^^^^
-*ID Chair:9
-Time:168ms
-^^^^
-*ID Chair:10
-Time:324ms
-^^^^
-*ID Chair:12
-Time:94ms
+Time:82ms
+[VkNoLimitThread] Slipped: 615, Num: 4, Time: 93ms
 ^^^^
 *ID Chair:13
-Time:152ms
+Time:115ms
 ^^^^
 *ID Chair:14
-Time:202ms
+Time:91ms
+[VkNoLimitThread] Slipped: 751, Num: 0, Time: 84ms
 ^^^^
 *ID Chair:15
-Time:110ms
+Time:126ms
 ^^^^
 *ID Chair:16
+Time:99ms
+^^^^
+*ID Chair:17
+Time:82ms
+[VkNoLimitThread] Slipped: 910, Num: 0, Time: 112ms
+^^^^
+*ID Chair:1861548
+Time:125ms
+^^^^
+*ID Chair:1927385
+Time:63ms
 ----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3444ms
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3344ms
-Time:21157ms
+**i:0 j:0 k:2016 ID Fct:1
+Time:2493ms
+[VkNoLimitThread] Slipped: 616, Num: 2, Time: 60ms
+Getted chairs
+Time:81ms
 ^^^^
 *ID Chair:1
-Time:1811ms
+Time:1800ms
+[VkNoLimitThread] Slipped: 736, Num: 1, Time: 53ms
 ^^^^
 *ID Chair:2
-Time:1087ms
+Time:1022ms
+[VkNoLimitThread] Slipped: 711, Num: 2, Time: 79ms
 ^^^^
 *ID Chair:3
-Time:661ms
+Time:703ms
+[VkNoLimitThread] Slipped: 686, Num: 5, Time: 94ms
 ^^^^
 *ID Chair:4
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:24578ms
-Time:172ms
-^^^^
-*ID Chair:1
-Time:1748ms
-^^^^
-*ID Chair:2
-Time:1129ms
-^^^^
-*ID Chair:3
-Time:636ms
-^^^^
-*ID Chair:4
-Time:407ms
+Time:424ms
 ^^^^
 *ID Chair:5
-Time:320ms
+Time:171ms
+[VkNoLimitThread] Slipped: 735, Num: 0, Time: 95ms
 ^^^^
 *ID Chair:6
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:2623ms
-Time:159ms
-^^^^
-*ID Chair:1
-Time:1728ms
-^^^^
-*ID Chair:2
-Time:1031ms
-^^^^
-*ID Chair:3
-Time:573ms
-^^^^
-*ID Chair:4
-Time:380ms
-^^^^
-*ID Chair:5
-Time:381ms
-^^^^
-*ID Chair:6
-Time:168ms
+Time:180ms
 ^^^^
 *ID Chair:7
-Time:218ms
+Time:137ms
 ^^^^
 *ID Chair:8
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3534ms
-{"response":{"count":7,"items":[{"id":29178269,"title":"Правила общения в группе","created":1386971739,"created_by":101,"updated":1386971739,"updated_by":-1061,"is_closed":1,"is_fixed":1,"comments":1},{"id":29257709,"title":"Вопросы по учёбе","created":1388392186,"created_by":101,"updated":1445598690,"updated_by":10962219,"is_closed":0,"is_fixed":1,"comments":771},{"id":29824425,"title":"Вопросы по поступлению","created":1397289458,"created_by":55835919,"updated":1446039232,"updated_by":25632438,"is_closed":0,"is_fixed":1,"comments":1742},{"id":29527837,"title":"Потеряшки или Бюро находок","created":1392709299,"created_by":34133281,"updated":1444826658,"updated_by":5239654,"is_closed":0,"is_fixed":1,"comments":36},{"id":29301051,"title":"Помогите с выбором","created":1389204668,"created_by":37737695,"updated":1446292428,"updated_by":25918106,"is_closed":0,"is_fixed":0,"comments":108},{"id":32616497,"title":"Вакансии для студентов","created":1443831392,"created_by":101,"updated":1446200294,"updated_by":1958481,"is_closed":0,"is_fixed":0,"comments":20},{"id":30137669,"title":"общежитие","created":1402372374,"created_by":73515010,"updated":1445165565,"updated_by":309196761,"is_closed":0,"is_fixed":0,"comments":463}],"default_order":1.000000,"can_add_topics":0}}
-[VkNoLimitThread] Time:178ms
-Time:136ms
-^^^^
-*ID Chair:1
-Time:2251ms
-^^^^
-*ID Chair:2
-Time:1295ms
-^^^^
-*ID Chair:3
-Time:626ms
-^^^^
-*ID Chair:4
-Time:381ms
-^^^^
-*ID Chair:5
-Time:264ms
-^^^^
-*ID Chair:6
-Time:181ms
-^^^^
-*ID Chair:7
-Time:217ms
-^^^^
-*ID Chair:8
-Time:263ms
+Time:106ms
 ^^^^
 *ID Chair:9
-Time:203ms
+Time:128ms
+[VkNoLimitThread] Slipped: 810, Num: 1, Time: 38ms
 ^^^^
 *ID Chair:10
-Time:216ms
+Time:156ms
 ^^^^
 *ID Chair:12
-Time:462ms
+Time:93ms
 ^^^^
 *ID Chair:13
-Time:166ms
+Time:72ms
+[VkNoLimitThread] Slipped: 581, Num: 4, Time: 73ms
+^^^^
+*ID Chair:14
+Time:69ms
+^^^^
+*ID Chair:15
+Time:91ms
+[VkNoLimitThread] Slipped: 672, Num: 4, Time: 62ms
+^^^^
+*ID Chair:16
+Time:66ms
+^^^^
+*ID Chair:17
+Time:79ms
+[VkNoLimitThread] Slipped: 870, Num: 5, Time: 84ms
+^^^^
+*ID Chair:1861548
+Time:67ms
+^^^^
+*ID Chair:1927385
+Time:69ms
 ----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3401ms
+**i:0 j:1 k:2015 ID Fct:7
+Time:1787ms
+[VkNoLimitThread] Slipped: 665, Num: 5, Time: 78ms
+Getted chairs
+Time:97ms
+^^^^
+*ID Chair:79
+Time:428ms
+[VkNoLimitThread] Slipped: 608, Num: 5, Time: 91ms
+^^^^
+*ID Chair:80
+Time:443ms
+^^^^
+*ID Chair:82
+Time:130ms
+[VkNoLimitThread] Slipped: 703, Num: 5, Time: 113ms
+^^^^
+*ID Chair:83
+Time:212ms
+^^^^
+*ID Chair:84
+Time:202ms
+[VkNoLimitThread] Slipped: 669, Num: 2, Time: 87ms
+^^^^
+*ID Chair:85
+Time:174ms
+^^^^
+*ID Chair:86
+Time:179ms
+[VkNoLimitThread] Slipped: 895, Num: 0, Time: 160ms
+^^^^
+*ID Chair:87
+Time:179ms
+^^^^
+*ID Chair:88
+Time:267ms
+^^^^
+*ID Chair:89
+Time:95ms
+[VkNoLimitThread] Slipped: 486, Num: 1, Time: 78ms
+^^^^
+*ID Chair:90
+Time:220ms
+^^^^
+*ID Chair:91
+Time:207ms
+[VkNoLimitThread] Slipped: 601, Num: 4, Time: 236ms
+^^^^
+*ID Chair:92
+Time:114ms
+^^^^
+*ID Chair:93
+Time:121ms
+[VkNoLimitThread] Slipped: 550, Num: 4, Time: 77ms
+^^^^
+*ID Chair:94
+Time:66ms
+^^^^
+*ID Chair:95
+Time:87ms
+^^^^
+*ID Chair:96
+Time:211ms
+[VkNoLimitThread] Slipped: 855, Num: 4, Time: 70ms
+^^^^
+*ID Chair:97
+Time:98ms
+^^^^
+*ID Chair:98
+Time:91ms
+^^^^
+*ID Chair:99
+Time:158ms
+^^^^
+*ID Chair:100
+Time:104ms
+[VkNoLimitThread] Slipped: 725, Num: 4, Time: 171ms
+^^^^
+*ID Chair:7641
+Time:88ms
+^^^^
+*ID Chair:20739
+Time:95ms
+^^^^
+*ID Chair:908718
+Time:78ms
+[VkNoLimitThread] Slipped: 532, Num: 5, Time: 110ms
+^^^^
+*ID Chair:1875327
+Time:163ms
 ----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:98088ms
-{"response":{"text":"King Cunta"}}
-[VkNoLimitThread] Time:154ms
-Time:167ms
-^^^^
-*ID Chair:1
-Time:22856ms
-^^^^
-*ID Chair:2
-Time:1033ms
-^^^^
-*ID Chair:3
-Time:562ms
-^^^^
-*ID Chair:4
-Time:422ms
-^^^^
-*ID Chair:5
-Time:350ms
-^^^^
-*ID Chair:6
-----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:27136ms
-status.get  user_id=5592362
-{"response":{"text":"King Cunta"}}
-[VkNoLimitThread] Time:287ms
-Time:177ms
-^^^^
-*ID Chair:1
-Time:1559ms
-^^^^
-*ID Chair:2
+**i:0 j:1 k:2016 ID Fct:7
+Time:2625ms
+[VkNoLimitThread] Slipped: 747, Num: 1, Time: 113ms

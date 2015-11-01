@@ -140,8 +140,8 @@ public class VkPrint {
 		}
 		
 		//System.out.println(result);
-		System.out.println("Count: "+((JSONObject)resJson.get("response")).get("count"));
-		System.out.println("Number of items:" + array.size());
+		log("Count: "+((JSONObject)resJson.get("response")).get("count"));
+		log("Number of items:" + array.size());
 		
 		try {
 			wrtFile.append("Count: "+((JSONObject)resJson.get("response")).get("count")+"\n");

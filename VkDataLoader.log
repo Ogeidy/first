@@ -2,221 +2,1053 @@
 #### Start the program ####
 
 **** University ID: 56 ****
-     [VkNoLimitThread] Slipped: 838, Num: 6, Time: 17229ms
+     [VkNoLimitThread] Slipped: 1027, Num: 5, Time: 22835ms
 ----------------------------
 **Uni:56 Fct:7426 Year:2000
-Time:290ms
+Time:141ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2001
-Time:386ms
-     [VkNoLimitThread] Slipped: 645, Num: 2, Time: 69ms
+Time:213ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: -27, Num: 2, Time: 121ms
 ----------------------------
 **Uni:56 Fct:7426 Year:2002
-Time:238ms
+Time:372ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2003
-Time:221ms
-     [VkNoLimitThread] Slipped: 697, Num: 1, Time: 94ms
+Time:125ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2004
-Time:310ms
+Time:130ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2005
-Time:390ms
-     [VkNoLimitThread] Slipped: 646, Num: 3, Time: 91ms
+Time:120ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2006
-Time:402ms
+Time:105ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2007
-Time:762ms
-     [VkNoLimitThread] Slipped: 710, Num: 6, Time: 124ms
+Time:149ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2008
-Time:426ms
+Time:105ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2009
-Time:840ms
-     [VkNoLimitThread] Slipped: 722, Num: 4, Time: 104ms
+Time:115ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2010
-Time:728ms
-     [VkNoLimitThread] Slipped: 541, Num: 3, Time: 494ms
+Time:101ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2011
-Time:374ms
+Time:104ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2012
-Time:412ms
-     [VkNoLimitThread] Slipped: 708, Num: 5, Time: 62ms
+Time:114ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2013
-Time:1105ms
-     [VkNoLimitThread] Slipped: 752, Num: 0, Time: 64ms
+Time:115ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2014
-Time:369ms
+Time:120ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2015
-Time:274ms
-     [VkNoLimitThread] Slipped: 698, Num: 2, Time: 72ms
+Time:382ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2016
-Time:245ms
+Time:120ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2017
-Time:136ms
-     [VkNoLimitThread] Slipped: 506, Num: 0, Time: 53ms
+Time:93ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2018
-Time:313ms
+Time:128ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:7426 Year:2019
-Time:104ms
-     [VkNoLimitThread] Slipped: 690, Num: 0, Time: 46ms
+Time:124ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2000
-Time:166ms
+Time:113ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2001
-Time:91ms
-     [VkNoLimitThread] Slipped: 624, Num: 5, Time: 91ms
+Time:117ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2002
-Time:101ms
+Time:124ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2003
-Time:98ms
-     [VkNoLimitThread] Slipped: 686, Num: 5, Time: 105ms
+Time:105ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2004
-Time:90ms
+Time:107ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2005
-Time:120ms
-     [VkNoLimitThread] Slipped: 774, Num: 5, Time: 14343ms
+Time:102ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2006
-Time:159ms
+Time:123ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2007
-Time:91ms
+Time:98ms
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 421, Num: 4, Time: 1638ms
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:141ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 639, Num: 5, Time: 130ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:157ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:221ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:152ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 220, Num: 1, Time: 147ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:170ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 763, Num: 4, Time: 126ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:119ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:126ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 399, Num: 5, Time: 128ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:97ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 540, Num: 4, Time: 95ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:228ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:95ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 644, Num: 1, Time: 144ms
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:108ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:163ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 763, Num: 1, Time: 153ms
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:144ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2013
+Time:182ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 618, Num: 5, Time: 135ms
+----------------------------
+**Uni:56 Fct:7426 Year:2014
+Time:244ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2015
+Time:119ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 381, Num: 1, Time: 84ms
+----------------------------
+**Uni:56 Fct:7426 Year:2016
+Time:93ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2017
+Time:83ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 723, Num: 2, Time: 100ms
+----------------------------
+**Uni:56 Fct:7426 Year:2018
+Time:106ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2019
+Time:105ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 253, Num: 6, Time: 116ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2000
+Time:168ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 260, Num: 1, Time: 116ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2001
+Time:144ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 1300, Num: 3, Time: 166ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2002
+Time:169ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2003
+Time:100ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2004
+Time:162ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 510, Num: 6, Time: 105ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2005
+Time:125ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 504, Num: 0, Time: 147ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2006
+Time:97ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 536, Num: 6, Time: 96ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2007
+Time:132ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2008
-Time:120ms
-     [VkNoLimitThread] Slipped: 711, Num: 0, Time: 80ms
+Time:129ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 615, Num: 2, Time: 106ms
 ----------------------------
 **Uni:56 Fct:2100284 Year:2009
-Time:154ms
+Time:100ms
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 727, Num: 0, Time: 1921ms
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:126ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:139ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:185ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 418, Num: 0, Time: 162ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:188ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 780, Num: 4, Time: 190ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:168ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:228ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 351, Num: 6, Time: 168ms
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:187ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 176, Num: 1, Time: 137ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:102ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 740, Num: 4, Time: 113ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:199ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:134ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 704, Num: 2, Time: 131ms
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:172ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:203ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: -56, Num: 6, Time: 215ms
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:141ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2013
+Time:148ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2014
+Time:109ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2015
+Time:100ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2016
+Time:103ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2017
+Time:146ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2018
+Time:117ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2019
+Time:103ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2000
+Time:118ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2001
+Time:104ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2002
+Time:111ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2003
+Time:96ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2004
+Time:140ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2005
+Time:102ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2006
+Time:110ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2007
+Time:202ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2008
+Time:106ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:2100284 Year:2009
+Time:119ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2010
-Time:133ms
-     [VkNoLimitThread] Slipped: 666, Num: 2, Time: 70ms
+Time:126ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2011
-Time:109ms
+Time:141ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2012
-Time:162ms
+Time:153ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2013
-Time:114ms
-     [VkNoLimitThread] Slipped: 826, Num: 3, Time: 83ms
+Time:151ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2014
-Time:111ms
+Time:138ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2015
-Time:93ms
+Time:202ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2016
-Time:254ms
-     [VkNoLimitThread] Slipped: 642, Num: 1, Time: 81ms
+Time:134ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2017
-Time:65ms
+Time:119ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2018
-Time:191ms
-     [VkNoLimitThread] Slipped: 722, Num: 0, Time: 180ms
+Time:402ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2100284 Year:2019
-Time:215ms
+Time:99ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2157466 Year:2000
-Time:242ms
+Time:140ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2157466 Year:2001
-Time:257ms
-     [VkNoLimitThread] Slipped: 613, Num: 2, Time: 224ms
+Time:121ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2157466 Year:2002
-Time:291ms
+Time:124ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2157466 Year:2003
-Time:267ms
-     [VkNoLimitThread] Slipped: 914, Num: 4, Time: 79ms
+Time:122ms
+Count: 0
+Number of items:0
 ----------------------------
 **Uni:56 Fct:2157466 Year:2004
-Time:345ms
+Time:103ms
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 350, Num: 6, Time: 1944ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2005
-Time:398ms
+**Uni:56 Fct:7426 Year:2000
+Time:130ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 655, Num: 0, Time: 180ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2006
-Time:317ms
-     [VkNoLimitThread] Slipped: 740, Num: 3, Time: 62ms
+**Uni:56 Fct:7426 Year:2001
+Time:197ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 542, Num: 4, Time: 163ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2007
-Time:399ms
+**Uni:56 Fct:7426 Year:2002
+Time:173ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 355, Num: 1, Time: 140ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2008
-Time:630ms
-     [VkNoLimitThread] Slipped: 668, Num: 1, Time: 53ms
+**Uni:56 Fct:7426 Year:2003
+Time:142ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 442, Num: 0, Time: 195ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2009
-Time:514ms
+**Uni:56 Fct:7426 Year:2004
+Time:21201ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 540, Num: 1, Time: 151ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2010
-Time:629ms
-     [VkNoLimitThread] Slipped: 574, Num: 3, Time: 64ms
+**Uni:56 Fct:7426 Year:2005
+Time:150ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 415, Num: 6, Time: 147ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2011
-Time:52ms
+**Uni:56 Fct:7426 Year:2006
+Time:107ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 0, Num: 3, Time: 125ms
+     [VkNoLimitThread] Slipped: 397, Num: 1, Time: 189ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2012
-Time:54ms
-     [VkNoLimitThread] Slipped: 783, Num: 3, Time: 85ms
+**Uni:56 Fct:7426 Year:2007
+Time:231ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 579, Num: 5, Time: 180ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2013
-Time:63ms
+**Uni:56 Fct:7426 Year:2008
+Time:140ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 544, Num: 2, Time: 163ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2014
-Time:52ms
+**Uni:56 Fct:7426 Year:2009
+Time:114ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 267, Num: 1, Time: 138ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2015
-Time:61ms
-     [VkNoLimitThread] Slipped: 747, Num: 2, Time: 50ms
+**Uni:56 Fct:7426 Year:2010
+Time:111ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 293, Num: 4, Time: 174ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2016
-Time:65ms
+**Uni:56 Fct:7426 Year:2011
+Time:101ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 412, Num: 6, Time: 320ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2017
-Time:45ms
+**Uni:56 Fct:7426 Year:2012
+Time:96ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 509, Num: 6, Time: 104ms
 ----------------------------
-**Uni:56 Fct:2157466 Year:2018
+**Uni:56 Fct:7426 Year:2013
+Time:101ms
+Count: 0
+Number of items:0
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 1096, Num: 6, Time: 1803ms
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:151ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:162ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 887, Num: 0, Time: 179ms
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:246ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 801, Num: 6, Time: 141ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:109ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 127, Num: 5, Time: 177ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:130ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 0, Num: 6, Time: 215ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:105ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 9, Num: 2, Time: 119ms
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:176ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 0, Num: 2, Time: 157ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:108ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:101ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 832, Num: 5, Time: 147ms
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:115ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:121ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 3, Num: 1, Time: 178ms
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:135ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 997, Num: 4, Time: 140ms
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:152ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 518, Num: 2, Time: 175ms
+----------------------------
+**Uni:56 Fct:7426 Year:2013
+Time:119ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 675, Num: 0, Time: 114ms
+----------------------------
+**Uni:56 Fct:7426 Year:2014
+Time:125ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 672, Num: 3, Time: 169ms
+----------------------------
+**Uni:56 Fct:7426 Year:2015
+Time:120ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 799, Num: 3, Time: 135ms
+----------------------------
+**Uni:56 Fct:7426 Year:2016
+Time:124ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 444, Num: 3, Time: 131ms
+----------------------------
+**Uni:56 Fct:7426 Year:2017
+Time:108ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 684, Num: 4, Time: 173ms
+----------------------------
+**Uni:56 Fct:7426 Year:2018
+Time:158ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 554, Num: 1, Time: 202ms
+----------------------------
+**Uni:56 Fct:7426 Year:2019
 Time:91ms
-     [VkNoLimitThread] Slipped: 797, Num: 6, Time: 58ms
+Count: 0
+Number of items:0
 ----------------------------
-**Uni:56 Fct:2157466 Year:2019
-Time:97ms
+**Uni:56 Fct:2100284 Year:2000
+Time:122ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 633, Num: 0, Time: 153ms
 ----------------------------
-**Uni:56 Fct:2157467 Year:2000
-Time:161ms
+**Uni:56 Fct:2100284 Year:2001
+Time:206ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 282, Num: 1, Time: 127ms
 ----------------------------
-**Uni:56 Fct:2157467 Year:2001
-Time:48ms
-     [VkNoLimitThread] Slipped: 572, Num: 0, Time: 71ms
+**Uni:56 Fct:2100284 Year:2002
+Time:138ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 499, Num: 0, Time: 160ms
 ----------------------------
-**Uni:56 Fct:2157467 Year:2002
-Time:49ms
+**Uni:56 Fct:2100284 Year:2003
+
+#### Start the program ####
+
+**** University ID: 56 ****
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:1897ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 516, Num: 2, Time: 112ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:150ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 106, Num: 6, Time: 178ms
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:114ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 1039, Num: 5, Time: 152ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:149ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:617ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 294, Num: 6, Time: 192ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:107ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 302, Num: 1, Time: 149ms
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:230ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 557, Num: 0, Time: 140ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:105ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 994, Num: 6, Time: 141ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:200ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 108, Num: 0, Time: 174ms
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:90ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 77, Num: 6, Time: 124ms
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:151ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 634, Num: 5, Time: 163ms
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:112ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 226, Num: 1, Time: 162ms
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:57ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 363, Num: 6, Time: 180ms
+----------------------------
+**Uni:56 Fct:7426 Year:2013
+Time:128ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 130, Num: 1, Time: 136ms
+----------------------------
+**Uni:56 Fct:7426 Year:2014
+Time:88ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 214, Num: 6, Time: 187ms
+----------------------------
+**Uni:56 Fct:7426 Year:2015
+Time:129ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 649, Num: 6, Time: 195ms
+----------------------------
+**Uni:56 Fct:7426 Year:2016
+Time:140ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 289, Num: 3, Time: 158ms
+----------------------------
+**Uni:56 Fct:7426 Year:2017
+Time:122ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 674, Num: 5, Time: 114ms
+----------------------------
+**Uni:56 Fct:7426 Year:2018
+Time:121ms
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 164, Num: 2, Time: 1811ms
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:113ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 97, Num: 0, Time: 159ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:172ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 0, Num: 0, Time: 175ms
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:116ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 157, Num: 0, Time: 116ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:203ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 497, Num: 2, Time: 117ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:150ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 628, Num: 2, Time: 242ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:124ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:215ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 717, Num: 5, Time: 133ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:139ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 304, Num: 3, Time: 164ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:140ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 702, Num: 3, Time: 147ms
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:152ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 131, Num: 4, Time: 147ms
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:189ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 86, Num: 1, Time: 175ms
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:102ms
+Count: 0
+Number of items:0
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:103ms
+
+#### Start the program ####
+
+**** University ID: 56 ****
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:22985ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 171, Num: 5, Time: 136ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:158ms
+Count: 0
+Number of items:0
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 0, Num: 4, Time: 1769ms
+     [VkNoLimitThread] Slipped: 251, Num: 5, Time: 119ms
+----------------------------
+**Uni:56 Fct:7426 Year:2000
+Time:181ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 587, Num: 6, Time: 284ms
+     [VkNoLimitThread] Slipped: 844, Num: 2, Time: 117ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:129ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 504, Num: 0, Time: 133ms
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:125ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 43, Num: 3, Time: 168ms
+     [VkNoLimitThread] Slipped: 36, Num: 4, Time: 138ms
+     [VkNoLimitThread] Slipped: 0, Num: 0, Time: 99ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:158ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 292, Num: 5, Time: 180ms
+     [VkNoLimitThread] Slipped: 757, Num: 4, Time: 164ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:138ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 0, Num: 0, Time: 162ms
+     [VkNoLimitThread] Slipped: 436, Num: 2, Time: 154ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:143ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 479, Num: 6, Time: 143ms
+     [VkNoLimitThread] Slipped: 146, Num: 4, Time: 108ms
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:162ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 622, Num: 0, Time: 138ms
+     [VkNoLimitThread] Slipped: 263, Num: 2, Time: 130ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:154ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 659, Num: 4, Time: 95ms
+     [VkNoLimitThread] Slipped: 388, Num: 5, Time: 147ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:180ms
+Count: 0
+Number of items:0
+     [VkNoLimitThread] Slipped: 722, Num: 4, Time: 174ms

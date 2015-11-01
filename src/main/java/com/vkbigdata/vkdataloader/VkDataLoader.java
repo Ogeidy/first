@@ -52,6 +52,12 @@ public class VkDataLoader {
 				
 				for (int k = conf.yearFrom; k <= conf.yearTo; k++) {      
 					
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 					synchronized(noLimit) {
 						prnt.log("----------------------------");
 						prnt.log("**Uni:"+Uni+" Fct:"+idFct+" Year:"+k);
@@ -104,6 +110,12 @@ public class VkDataLoader {
 							
 							int idChr = Integer.parseInt(((JSONObject)arrChrs.get(z)).get("id").toString());
 							
+							try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							synchronized(noLimit) {
 								prnt.log("^^^^");
 								prnt.log("*ID Chair:"+idChr);

@@ -1,231 +1,222 @@
+
+#### Start the program ####
+
+**** University ID: 56 ****
+     [VkNoLimitThread] Slipped: 838, Num: 6, Time: 17229ms
 ----------------------------
-**i:0 j:0 k:2015 ID Fct:1
-Time:3913ms
-[VkNoLimitThread] Slipped: 691, Num: 5, Time: 95ms
-Getted chairs
-Time:118ms
-^^^^
-*ID Chair:1
-Time:2002ms
-[VkNoLimitThread] Slipped: 789, Num: 3, Time: 100ms
-^^^^
-*ID Chair:2
-Time:1068ms
-[VkNoLimitThread] Slipped: 787, Num: 2, Time: 75ms
-^^^^
-*ID Chair:3
-Time:851ms
-[VkNoLimitThread] Slipped: 652, Num: 3, Time: 182ms
-^^^^
-*ID Chair:4
-Time:513ms
-^^^^
-*ID Chair:5
-Time:261ms
-[VkNoLimitThread] Slipped: 829, Num: 0, Time: 69ms
-^^^^
-*ID Chair:6
-Time:139ms
-^^^^
-*ID Chair:7
-Time:192ms
-^^^^
-*ID Chair:8
-Time:212ms
-[VkNoLimitThread] Slipped: 741, Num: 5, Time: 167ms
-^^^^
-*ID Chair:9
-Time:117ms
-^^^^
-*ID Chair:10
-Time:186ms
-^^^^
-*ID Chair:12
-Time:82ms
-[VkNoLimitThread] Slipped: 615, Num: 4, Time: 93ms
-^^^^
-*ID Chair:13
-Time:115ms
-^^^^
-*ID Chair:14
+**Uni:56 Fct:7426 Year:2000
+Time:290ms
+----------------------------
+**Uni:56 Fct:7426 Year:2001
+Time:386ms
+     [VkNoLimitThread] Slipped: 645, Num: 2, Time: 69ms
+----------------------------
+**Uni:56 Fct:7426 Year:2002
+Time:238ms
+----------------------------
+**Uni:56 Fct:7426 Year:2003
+Time:221ms
+     [VkNoLimitThread] Slipped: 697, Num: 1, Time: 94ms
+----------------------------
+**Uni:56 Fct:7426 Year:2004
+Time:310ms
+----------------------------
+**Uni:56 Fct:7426 Year:2005
+Time:390ms
+     [VkNoLimitThread] Slipped: 646, Num: 3, Time: 91ms
+----------------------------
+**Uni:56 Fct:7426 Year:2006
+Time:402ms
+----------------------------
+**Uni:56 Fct:7426 Year:2007
+Time:762ms
+     [VkNoLimitThread] Slipped: 710, Num: 6, Time: 124ms
+----------------------------
+**Uni:56 Fct:7426 Year:2008
+Time:426ms
+----------------------------
+**Uni:56 Fct:7426 Year:2009
+Time:840ms
+     [VkNoLimitThread] Slipped: 722, Num: 4, Time: 104ms
+----------------------------
+**Uni:56 Fct:7426 Year:2010
+Time:728ms
+     [VkNoLimitThread] Slipped: 541, Num: 3, Time: 494ms
+----------------------------
+**Uni:56 Fct:7426 Year:2011
+Time:374ms
+----------------------------
+**Uni:56 Fct:7426 Year:2012
+Time:412ms
+     [VkNoLimitThread] Slipped: 708, Num: 5, Time: 62ms
+----------------------------
+**Uni:56 Fct:7426 Year:2013
+Time:1105ms
+     [VkNoLimitThread] Slipped: 752, Num: 0, Time: 64ms
+----------------------------
+**Uni:56 Fct:7426 Year:2014
+Time:369ms
+----------------------------
+**Uni:56 Fct:7426 Year:2015
+Time:274ms
+     [VkNoLimitThread] Slipped: 698, Num: 2, Time: 72ms
+----------------------------
+**Uni:56 Fct:7426 Year:2016
+Time:245ms
+----------------------------
+**Uni:56 Fct:7426 Year:2017
+Time:136ms
+     [VkNoLimitThread] Slipped: 506, Num: 0, Time: 53ms
+----------------------------
+**Uni:56 Fct:7426 Year:2018
+Time:313ms
+----------------------------
+**Uni:56 Fct:7426 Year:2019
+Time:104ms
+     [VkNoLimitThread] Slipped: 690, Num: 0, Time: 46ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2000
+Time:166ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2001
 Time:91ms
-[VkNoLimitThread] Slipped: 751, Num: 0, Time: 84ms
-^^^^
-*ID Chair:15
-Time:126ms
-^^^^
-*ID Chair:16
-Time:99ms
-^^^^
-*ID Chair:17
-Time:82ms
-[VkNoLimitThread] Slipped: 910, Num: 0, Time: 112ms
-^^^^
-*ID Chair:1861548
-Time:125ms
-^^^^
-*ID Chair:1927385
+     [VkNoLimitThread] Slipped: 624, Num: 5, Time: 91ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2002
+Time:101ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2003
+Time:98ms
+     [VkNoLimitThread] Slipped: 686, Num: 5, Time: 105ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2004
+Time:90ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2005
+Time:120ms
+     [VkNoLimitThread] Slipped: 774, Num: 5, Time: 14343ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2006
+Time:159ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2007
+Time:91ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2008
+Time:120ms
+     [VkNoLimitThread] Slipped: 711, Num: 0, Time: 80ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2009
+Time:154ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2010
+Time:133ms
+     [VkNoLimitThread] Slipped: 666, Num: 2, Time: 70ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2011
+Time:109ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2012
+Time:162ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2013
+Time:114ms
+     [VkNoLimitThread] Slipped: 826, Num: 3, Time: 83ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2014
+Time:111ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2015
+Time:93ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2016
+Time:254ms
+     [VkNoLimitThread] Slipped: 642, Num: 1, Time: 81ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2017
+Time:65ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2018
+Time:191ms
+     [VkNoLimitThread] Slipped: 722, Num: 0, Time: 180ms
+----------------------------
+**Uni:56 Fct:2100284 Year:2019
+Time:215ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2000
+Time:242ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2001
+Time:257ms
+     [VkNoLimitThread] Slipped: 613, Num: 2, Time: 224ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2002
+Time:291ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2003
+Time:267ms
+     [VkNoLimitThread] Slipped: 914, Num: 4, Time: 79ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2004
+Time:345ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2005
+Time:398ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2006
+Time:317ms
+     [VkNoLimitThread] Slipped: 740, Num: 3, Time: 62ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2007
+Time:399ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2008
+Time:630ms
+     [VkNoLimitThread] Slipped: 668, Num: 1, Time: 53ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2009
+Time:514ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2010
+Time:629ms
+     [VkNoLimitThread] Slipped: 574, Num: 3, Time: 64ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2011
+Time:52ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2012
+Time:54ms
+     [VkNoLimitThread] Slipped: 783, Num: 3, Time: 85ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2013
 Time:63ms
 ----------------------------
-**i:0 j:0 k:2016 ID Fct:1
-Time:2493ms
-[VkNoLimitThread] Slipped: 616, Num: 2, Time: 60ms
-Getted chairs
-Time:81ms
-^^^^
-*ID Chair:1
-Time:1800ms
-[VkNoLimitThread] Slipped: 736, Num: 1, Time: 53ms
-^^^^
-*ID Chair:2
-Time:1022ms
-[VkNoLimitThread] Slipped: 711, Num: 2, Time: 79ms
-^^^^
-*ID Chair:3
-Time:703ms
-[VkNoLimitThread] Slipped: 686, Num: 5, Time: 94ms
-^^^^
-*ID Chair:4
-Time:424ms
-^^^^
-*ID Chair:5
-Time:171ms
-[VkNoLimitThread] Slipped: 735, Num: 0, Time: 95ms
-^^^^
-*ID Chair:6
-Time:180ms
-^^^^
-*ID Chair:7
-Time:137ms
-^^^^
-*ID Chair:8
-Time:106ms
-^^^^
-*ID Chair:9
-Time:128ms
-[VkNoLimitThread] Slipped: 810, Num: 1, Time: 38ms
-^^^^
-*ID Chair:10
-Time:156ms
-^^^^
-*ID Chair:12
-Time:93ms
-^^^^
-*ID Chair:13
-Time:72ms
-[VkNoLimitThread] Slipped: 581, Num: 4, Time: 73ms
-^^^^
-*ID Chair:14
-Time:69ms
-^^^^
-*ID Chair:15
-Time:91ms
-[VkNoLimitThread] Slipped: 672, Num: 4, Time: 62ms
-^^^^
-*ID Chair:16
-Time:66ms
-^^^^
-*ID Chair:17
-Time:79ms
-[VkNoLimitThread] Slipped: 870, Num: 5, Time: 84ms
-^^^^
-*ID Chair:1861548
-Time:67ms
-^^^^
-*ID Chair:1927385
-Time:69ms
+**Uni:56 Fct:2157466 Year:2014
+Time:52ms
 ----------------------------
-**i:0 j:1 k:2015 ID Fct:7
-Time:1787ms
-[VkNoLimitThread] Slipped: 665, Num: 5, Time: 78ms
-Getted chairs
+**Uni:56 Fct:2157466 Year:2015
+Time:61ms
+     [VkNoLimitThread] Slipped: 747, Num: 2, Time: 50ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2016
+Time:65ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2017
+Time:45ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2018
+Time:91ms
+     [VkNoLimitThread] Slipped: 797, Num: 6, Time: 58ms
+----------------------------
+**Uni:56 Fct:2157466 Year:2019
 Time:97ms
-^^^^
-*ID Chair:79
-Time:428ms
-[VkNoLimitThread] Slipped: 608, Num: 5, Time: 91ms
-^^^^
-*ID Chair:80
-Time:443ms
-^^^^
-*ID Chair:82
-Time:130ms
-[VkNoLimitThread] Slipped: 703, Num: 5, Time: 113ms
-^^^^
-*ID Chair:83
-Time:212ms
-^^^^
-*ID Chair:84
-Time:202ms
-[VkNoLimitThread] Slipped: 669, Num: 2, Time: 87ms
-^^^^
-*ID Chair:85
-Time:174ms
-^^^^
-*ID Chair:86
-Time:179ms
-[VkNoLimitThread] Slipped: 895, Num: 0, Time: 160ms
-^^^^
-*ID Chair:87
-Time:179ms
-^^^^
-*ID Chair:88
-Time:267ms
-^^^^
-*ID Chair:89
-Time:95ms
-[VkNoLimitThread] Slipped: 486, Num: 1, Time: 78ms
-^^^^
-*ID Chair:90
-Time:220ms
-^^^^
-*ID Chair:91
-Time:207ms
-[VkNoLimitThread] Slipped: 601, Num: 4, Time: 236ms
-^^^^
-*ID Chair:92
-Time:114ms
-^^^^
-*ID Chair:93
-Time:121ms
-[VkNoLimitThread] Slipped: 550, Num: 4, Time: 77ms
-^^^^
-*ID Chair:94
-Time:66ms
-^^^^
-*ID Chair:95
-Time:87ms
-^^^^
-*ID Chair:96
-Time:211ms
-[VkNoLimitThread] Slipped: 855, Num: 4, Time: 70ms
-^^^^
-*ID Chair:97
-Time:98ms
-^^^^
-*ID Chair:98
-Time:91ms
-^^^^
-*ID Chair:99
-Time:158ms
-^^^^
-*ID Chair:100
-Time:104ms
-[VkNoLimitThread] Slipped: 725, Num: 4, Time: 171ms
-^^^^
-*ID Chair:7641
-Time:88ms
-^^^^
-*ID Chair:20739
-Time:95ms
-^^^^
-*ID Chair:908718
-Time:78ms
-[VkNoLimitThread] Slipped: 532, Num: 5, Time: 110ms
-^^^^
-*ID Chair:1875327
-Time:163ms
 ----------------------------
-**i:0 j:1 k:2016 ID Fct:7
-Time:2625ms
-[VkNoLimitThread] Slipped: 747, Num: 1, Time: 113ms
+**Uni:56 Fct:2157467 Year:2000
+Time:161ms
+----------------------------
+**Uni:56 Fct:2157467 Year:2001
+Time:48ms
+     [VkNoLimitThread] Slipped: 572, Num: 0, Time: 71ms
+----------------------------
+**Uni:56 Fct:2157467 Year:2002
+Time:49ms

@@ -6,8 +6,10 @@ import org.json.simple.parser.ParseException;
 
 public class VkDataLoader {
 	
-	private static String CONFIG_FILE = "config_spbsu.txt";
+	private static String CONFIG_FILE = "config_poly.txt";
+	
 	private static String OUT_FILE_PREFIX = "output-";
+	
 	private static String LOG_FILE = "VkDataLoader.log";
 	
 	private static VkConfig conf;
@@ -33,11 +35,15 @@ public class VkDataLoader {
 		// Start the parallel thread
 		noLimit.start();
 		
+		prnt.log("\n#### Start the program ####");
+		
 		for (int i = 0; i < conf.universityNum; i++) {
 
 			int Uni = Integer.parseInt(conf.universities[i].get("id").toString());
 			int numFcts = Integer.parseInt(((JSONObject)conf.faculties[i].get("response")).get("count").toString());
 			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt", LOG_FILE);
+			
+			prnt.log("\n**** University ID: "+Uni+" ****");
 			
 			for (int j = 0; j < numFcts; j++){
 				
@@ -48,7 +54,7 @@ public class VkDataLoader {
 					
 					synchronized(noLimit) {
 						prnt.log("----------------------------");
-						prnt.log("**i:"+i+" j:"+j+" k:"+k+" ID Fct:"+idFct);
+						prnt.log("**Uni:"+Uni+" Fct:"+idFct+" Year:"+k);
 						
 						startTime = System.currentTimeMillis();
 						result = vk.sendReqS("users.search", "university="+Uni

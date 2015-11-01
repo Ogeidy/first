@@ -27,7 +27,7 @@ public class VkNoLimitThread extends Thread {
 		Random rand = new Random();
 		while (!Thread.interrupted()) {
 			
-			int i = rand.nextInt(NUM);
+			int i = rand.nextInt(NUM+1);
 			int timeSleep = (int) (700+rand.nextGaussian()*100);
 			
 			synchronized(VkNoLimitThread.this) {
@@ -37,7 +37,7 @@ public class VkNoLimitThread extends Thread {
 				//Check time limit
 				stopTime = System.currentTimeMillis();
 				int time = (int)(stopTime-startTime);
-				prnt.log("[VkNoLimitThread] Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
+				prnt.log("     [VkNoLimitThread] Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
 				if (time < 340) {
 					try {
 						Thread.sleep(340 - time);

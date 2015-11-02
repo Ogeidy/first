@@ -6,6 +6,8 @@ public class VkNoLimitThread extends Thread {
 	
 	private VkApi vk;
 	private VkPrint prnt;
+	Random rand;
+	
 	private int NUM = 18;  //Size of reqs array
 	private String reqs[][] = {{"friends.getOnline", "user_id=1&count=5"},
 							{"status.get", "user_id=5592362"},
@@ -32,11 +34,11 @@ public class VkNoLimitThread extends Thread {
 		this.prnt = vkPrnt;
 	}
 
-	@Override
 	public void run() {
 
 		long startTime, stopTime;
-		Random rand = new Random();
+		rand = new Random();
+		
 		while (!Thread.interrupted()) {
 			
 			int i = rand.nextInt(NUM+1);
@@ -58,6 +60,8 @@ public class VkNoLimitThread extends Thread {
 						return;
 					}
 				}
+				
+				randomPause();
 			}
 			
 			try {
@@ -66,6 +70,21 @@ public class VkNoLimitThread extends Thread {
 				return;
 			}
 			
+		}
+		
+	}
+	
+	private void randomPause() {
+		
+		int i = rand.nextInt(100);
+		
+		if (i > 70) {
+			prnt.log("     [VkNoLimitThread] randomPause: "+i*50+"ms");
+			try {
+				Thread.sleep(i*50);
+			} catch (InterruptedException e) {
+				return;
+			}
 		}
 		
 	}

@@ -1,6 +1,6 @@
 APP_ID = 5075749
-ACCESS_TOKEN = 8b097aa4f6b535afd3289e040d95067029d1a8a977fd179e6786fedd4b636cce5f56bc66631f3815bd04b
-YearFrom = 2000
+ACCESS_TOKEN = a6ef7b72a40ef21564e7e25854623f92e0b2b360458f9f4bb1b233bfcbd6ddc24f0e05720736c31c9bc6c
+YearFrom = 1970
 YearTo = 2019
 UniversityNum = 1
 {"id":56,"title":"СПбПУ Петра Великого (Политех)"}

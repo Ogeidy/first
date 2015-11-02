@@ -35,7 +35,7 @@ public class VkDataLoader {
 		// Start the parallel thread
 		noLimit.start();
 		
-		prnt.log("\n#### Start the program ####");
+		prnt.log("#### Start the program ####");
 		
 		for (int i = 0; i < conf.universityNum; i++) {
 
@@ -43,7 +43,7 @@ public class VkDataLoader {
 			int numFcts = Integer.parseInt(((JSONObject)conf.faculties[i].get("response")).get("count").toString());
 			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt", LOG_FILE);
 			
-			prnt.log("\n**** University ID: "+Uni+" ****");
+			prnt.log("**** University ID: "+Uni+" ****");
 			
 			for (int j = 0; j < numFcts; j++){
 				
@@ -60,13 +60,13 @@ public class VkDataLoader {
 					}
 					synchronized(noLimit) {
 						prnt.log("----------------------------");
-						prnt.log("**Uni:"+Uni+" Fct:"+idFct+" Year:"+k);
+						prnt.log("<Uni:"+Uni+" Fct:"+idFct+" Year:"+k+">");
 						
 						startTime = System.currentTimeMillis();
 						result = vk.sendReqS("users.search", "university="+Uni
 								+"&university_faculty="+idFct
 								+"&university_year="+k
-								+"&fields=home_town,universities,schools,sex&count=1000");
+								+"&fields=sex,bdate,city,country,home_town,universities,schools&count=1000");
 						checkTime(startTime);
 					}
 					
@@ -125,7 +125,7 @@ public class VkDataLoader {
 										+"&university_faculty="+idFct
 										+"&university_year="+k
 										+"&university_chair="+idChr
-										+"&fields=home_town,universities,schools,sex&count=1000");
+										+"&fields=sex,bdate,city,country,home_town,universities,schools&count=1000");
 								checkTime(startTime);
 							}
 							

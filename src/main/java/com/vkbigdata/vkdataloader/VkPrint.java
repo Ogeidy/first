@@ -2,6 +2,8 @@ package main.java.com.vkbigdata.vkdataloader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -49,11 +51,15 @@ public class VkPrint {
 	 */
 	public int log(String str) {
 		
-		System.out.println(str);
+		DateFormat df = DateFormat.getDateTimeInstance (DateFormat.DEFAULT,DateFormat.DEFAULT);
+		Date currentDate = new Date();
+		
+		System.out.println(df.format(currentDate)+" | "+str);
 		
 		if (logFile != null) {
 		
 			FileWriter wrtFile = null;
+			
 			
 			try {
 				wrtFile = new FileWriter(logFile, true);
@@ -64,7 +70,7 @@ public class VkPrint {
 			}
 			
 			try {
-				wrtFile.append(str+"\n");
+				wrtFile.append(df.format(currentDate)+" | "+str+"\n");
 				wrtFile.flush();
 				wrtFile.close();
 			} catch (IOException e) {

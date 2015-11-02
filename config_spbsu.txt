@@ -1,0 +1,8 @@
+APP_ID = 5075749
+ACCESS_TOKEN = 538ffad57d276793a4beea5fc91547e44f75664fdc2199a192edbeac901e96c7278a5ba4cb75dffb7c6cf
+YearFrom = 2015
+YearTo = 2016
+UniversityNum = 1
+{"id":1,"title":"СПбГУ"}
+Faculties:
+{"response":{"count":2,"items":[{"id":1,"title":"Биологический"},{"id":7,"title":"Математико-механический"}]}}

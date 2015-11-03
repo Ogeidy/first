@@ -6,7 +6,7 @@ import org.json.simple.parser.ParseException;
 
 public class VkDataLoader {
 	
-	private static String CONFIG_FILE = "config_poly.txt";
+	private static String CONFIG_FILE = "config_poly_2.txt";
 	
 	private static String OUT_FILE_PREFIX = "output-";
 	
@@ -53,7 +53,7 @@ public class VkDataLoader {
 				for (int k = conf.yearFrom; k <= conf.yearTo; k++) {      
 					
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(2000);
 					} catch (InterruptedException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -111,7 +111,7 @@ public class VkDataLoader {
 							int idChr = Integer.parseInt(((JSONObject)arrChrs.get(z)).get("id").toString());
 							
 							try {
-								Thread.sleep(1000);
+								Thread.sleep(2000);
 							} catch (InterruptedException e1) {
 								// TODO Auto-generated catch block
 								e1.printStackTrace();

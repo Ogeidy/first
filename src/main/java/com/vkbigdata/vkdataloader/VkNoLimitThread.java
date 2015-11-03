@@ -42,7 +42,7 @@ public class VkNoLimitThread extends Thread {
 		while (!Thread.interrupted()) {
 			
 			int i = rand.nextInt(NUM+1);
-			int timeSleep = (int) (400+rand.nextGaussian()*400);
+			int timeSleep = (int) (600+rand.nextGaussian()*400);
 			if (timeSleep < 0) timeSleep = 0;
 			
 			synchronized(VkNoLimitThread.this) {
@@ -79,9 +79,9 @@ public class VkNoLimitThread extends Thread {
 		int i = rand.nextInt(100);
 		
 		if (i > 70) {
-			prnt.log("     [VkNoLimitThread] randomPause: "+i*50+"ms");
+			prnt.log("     [VkNoLimitThread] randomPause: "+i*100+"ms");
 			try {
-				Thread.sleep(i*50);
+				Thread.sleep(i*100);
 			} catch (InterruptedException e) {
 				return;
 			}

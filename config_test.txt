@@ -1,0 +1,8 @@
+APP_ID = 5075749
+ACCESS_TOKEN = 3fda799ea2ec28d4eeb334ef57f88a7bd4fb98df3f68cb187b79f251e1a3eee3f71dd428881d767b40cf1
+YearFrom = 1990
+YearTo = 1992
+UniversityNum = 1
+{"id":56,"title":"СПбПУ Петра Великого (Политех)"}
+Faculties:
+{"response":{"count":1,"items":[{"id":2157469,"title":"Институт компьютерных наук и технологий (бывш. Технической кибернетики)"}]}}

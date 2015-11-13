@@ -45,7 +45,7 @@ public class VkNoLimitThread extends Thread {
 			int timeSleep = (int) (600+rand.nextGaussian()*400);
 			if (timeSleep < 0) timeSleep = 0;
 			
-			synchronized(VkNoLimitThread.this) {
+			synchronized(vk) {
 				startTime = System.currentTimeMillis();
 				vk.sendReqS(reqs[i][0], reqs[i][1]);
 				

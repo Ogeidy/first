@@ -21,6 +21,7 @@ public class VkApi {
 	
 	private String API_VERSION = "5.37";
 	private VkConfig conf;
+	private VkPrint prnt;
 	
 	private String API_REQUEST = "https://api.vk.com/method/{METHOD_NAME}"
             + "?{PARAMETERS}"
@@ -39,9 +40,10 @@ public class VkApi {
 	 * Creates a new <code>VkApi</code> instance 
 	 * @param conf
 	 */
-	public VkApi(VkConfig conf){
+	public VkApi(VkConfig conf,  VkPrint vkPrnt){
 		
 		this.conf = conf;
+		this.prnt = vkPrnt;
 		
 	}
 	
@@ -200,6 +202,26 @@ public class VkApi {
 		}
 		
 		return 0;
+	}
+	
+	/**
+	 * Check the VK timeouts
+	 * @param startTime
+	 */
+	public void checkTime(long startTime) {
+		
+		long finish = System.currentTimeMillis();
+		int time = (int)(finish-startTime);
+		prnt.log("Time:"+time+"ms");
+		
+		if (time < 340) {
+			try {
+				Thread.sleep(340 - time);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 }

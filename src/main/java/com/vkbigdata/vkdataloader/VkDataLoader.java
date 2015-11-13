@@ -6,7 +6,7 @@ import org.json.simple.parser.ParseException;
 
 public class VkDataLoader {
 	
-	private static String CONFIG_FILE = "config_poly_2.txt";
+	private static String CONFIG_FILE = "config_test.txt";
 	
 	private static String OUT_FILE_PREFIX = "output-";
 	
@@ -15,6 +15,7 @@ public class VkDataLoader {
 	private static VkConfig conf;
 	private static VkApi vk;
 	private static VkPrint prnt;
+	private static VkCityDataBase cts;
 	private static VkNoLimitThread noLimit;
 	
 	
@@ -23,8 +24,9 @@ public class VkDataLoader {
 		
 		conf = new VkConfig(CONFIG_FILE);
 		conf.readConfig();  //Reading config file
-		vk = new VkApi(conf);
 		prnt = new VkPrint(OUT_FILE_PREFIX+".txt", LOG_FILE);
+		vk = new VkApi(conf, prnt);
+		cts = new VkCityDataBase("cities_base.txt", vk, prnt);
 		noLimit = new VkNoLimitThread(vk, prnt);
 		
 		JSONParser parser = new JSONParser();
@@ -58,7 +60,7 @@ public class VkDataLoader {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-					synchronized(noLimit) {
+					synchronized(vk) {
 						prnt.log("----------------------------");
 						prnt.log("<Uni:"+Uni+" Fct:"+idFct+" Year:"+k+">");
 						
@@ -67,7 +69,7 @@ public class VkDataLoader {
 								+"&university_faculty="+idFct
 								+"&university_year="+k
 								+"&fields=sex,bdate,city,country,home_town,universities,schools&count=1000");
-						checkTime(startTime);
+						vk.checkTime(startTime);
 					}
 					
 					try {
@@ -85,13 +87,14 @@ public class VkDataLoader {
 								+" Year: "+k
 								+" Faculty:"+((JSONObject)arrFcts.get(j)).toString()+"\n");
 						prnt.printResult(result);
+						cts.checkCity(resJson);
 					} 
 					else {
-						synchronized(noLimit) {
+						synchronized(vk) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
 							prnt.log("Getted chairs");
-							checkTime(startTime);
+							vk.checkTime(startTime);
 						}
 						
 						try {
@@ -116,7 +119,7 @@ public class VkDataLoader {
 								// TODO Auto-generated catch block
 								e1.printStackTrace();
 							}
-							synchronized(noLimit) {
+							synchronized(vk) {
 								prnt.log("^^^^");
 								prnt.log("*ID Chair:"+idChr);
 								
@@ -126,7 +129,7 @@ public class VkDataLoader {
 										+"&university_year="+k
 										+"&university_chair="+idChr
 										+"&fields=sex,bdate,city,country,home_town,universities,schools&count=1000");
-								checkTime(startTime);
+								vk.checkTime(startTime);
 							}
 							
 							prnt.print("\nUniversity: "+conf.universities[i].toString()
@@ -134,6 +137,7 @@ public class VkDataLoader {
 									+" Faculty:"+((JSONObject)arrFcts.get(j)).toString()
 									+" Chair:"+((JSONObject)arrChrs.get(z)).toString()+"\n");
 							prnt.printResult(result);
+							cts.checkCity(resJson);
 						}
 						
 					}
@@ -147,22 +151,23 @@ public class VkDataLoader {
 	}
 	
 	/**
-	 * Check the VK timeouts
-	 * @param startTime
+	 * Parse String into JSONObject
+	 * @param input
+	 * @return
 	 */
-	private static void checkTime(long startTime) {
+	public static JSONObject parseString(String input) {
 		
-		long finish = System.currentTimeMillis();
-		int time = (int)(finish-startTime);
-		prnt.log("Time:"+time+"ms");
+		JSONParser parser = new JSONParser();
+		JSONObject resJson = new JSONObject();
 		
-		if (time < 340) {
-			try {
-				Thread.sleep(340 - time);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+		try {
+			resJson = (JSONObject)parser.parse(input);
+		} catch (ParseException e) {
+			System.out.println("Error: Can't parse the response!");
+			e.printStackTrace();
+			System.exit(1);
 		}
 		
+		return resJson;
 	}
 }

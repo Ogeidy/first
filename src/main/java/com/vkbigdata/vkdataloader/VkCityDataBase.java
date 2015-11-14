@@ -145,7 +145,6 @@ public class VkCityDataBase {
 			prnt.log(TAG+" cityDBThread started");
 			
 			try {
-				//ctWrt = new FileWriter(ctFile, true);
 				
 				JSONObject resJson = new JSONObject();
 				JSONArray resArr;
@@ -166,7 +165,6 @@ public class VkCityDataBase {
 					if (!cities.containsKey(bCt.id) && !bCt.countryId.equals("0") ) {
 						
 						//---Get City Title---
-						//if (DBG) prnt.log(TAG+"Get City Title");
 						if (bCt.title == null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
@@ -188,7 +186,6 @@ public class VkCityDataBase {
 						}
 						
 						//---Get Country Title---
-						//if (DBG) prnt.log(TAG+"Get Country Title");
 						if (bCt.countryTitle == null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
@@ -210,7 +207,6 @@ public class VkCityDataBase {
 						}
 						
 						//---Get City Title in English---
-						//if (DBG) prnt.log(TAG+"Get City Title in English");
 						synchronized(vk) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReq("database.getCitiesById", "city_ids="+bCt.id+"&lang=en");
@@ -232,7 +228,6 @@ public class VkCityDataBase {
 						cityTitleEn = removeSpace(cityTitleEn);
 						
 						//---Get region---
-						//if (DBG) prnt.log(TAG+"Get region bCt.countryId:"+bCt.countryId);
 						if (cityTitleEn != null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
@@ -271,7 +266,6 @@ public class VkCityDataBase {
 					}
 				}
 				
-				//ctWrt.close();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

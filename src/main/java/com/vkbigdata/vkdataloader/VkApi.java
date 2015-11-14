@@ -19,6 +19,8 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public class VkApi {
 	
+	private boolean DBG = true;
+	private String TAG = "   [VkApi]";
 	private String API_VERSION = "5.37";
 	private VkConfig conf;
 	private VkPrint prnt;
@@ -59,6 +61,8 @@ public class VkApi {
         try {
             Desktop.getDesktop().browse(new URL(reqUrl).toURI());
         } catch (URISyntaxException ex) {
+        	if (DBG) prnt.log(TAG+" Can't open browser. Exception:"+ex);
+        	ex.printStackTrace();
             throw new IOException(ex);
         }
 	}
@@ -96,15 +100,17 @@ public class VkApi {
 			
 			sock.close();
 		}catch (MalformedURLException e) {
-		     e.printStackTrace();
+			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
+		    e.printStackTrace();
 		} catch (IOException e) {
-		     e.printStackTrace();
+			if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
+		    e.printStackTrace();
 		}
 		
 		// Warning! Here recursion is possible
 		int checkVal = check(data);
 		if ( checkVal == 1){
-			data = sendReqS(method, parameters);
+			data = sendReq(method, parameters);
 		}
 		else if (checkVal == -1) {
 			System.exit(1);
@@ -146,18 +152,20 @@ public class VkApi {
 			con.disconnect();
 			
 		}catch (MalformedURLException e) {
-		     e.printStackTrace();
+			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
+		    e.printStackTrace();
 		} catch (IOException e) {
-		     e.printStackTrace();
+			if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
+		    e.printStackTrace();
 		}
 		
 		// Warning! Here recursion is possible
 		int checkVal = check(data);
 		if ( checkVal == 1){
-			data = sendReqS(method, parameters);
+			data = sendReqS(method , parameters);
 		}
 		else if (checkVal == -1) {
-			System.out.println("Program closed!");
+			if (DBG) prnt.log(TAG+"Program closed!");
 			System.exit(1);
 		}
 		
@@ -176,11 +184,11 @@ public class VkApi {
 		
 		if (data.contains("{\"error\":")){
 			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));
-			System.out.print("Error code: " + code);
+			if (DBG) prnt.log(TAG+" Error code: " + code);
 			
 			if (code == 5){
-				System.out.println(" User authorization failed!");
-				System.out.println("Confirm your agreement to accessto some data, copy here access token form address line:");
+				if (DBG) prnt.log(TAG+" User authorization failed!");
+				if (DBG) prnt.log(TAG+" Confirm your agreement to accessto some data, copy here access token form address line:");
 
 				try {
 					auth();
@@ -212,7 +220,7 @@ public class VkApi {
 		
 		long finish = System.currentTimeMillis();
 		int time = (int)(finish-startTime);
-		prnt.log("Time:"+time+"ms");
+		if (DBG) prnt.log("Time:"+time+"ms");
 		
 		if (time < 340) {
 			try {

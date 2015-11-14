@@ -1,24 +1,9 @@
-{"id":1,"title":"Москва","region":"Московская область","country":"Россия"}
-{"region":null,"id":"2","title":"Санкт-Петербург","country":"Россия"}
 {"region":"Кировская область","id":"66","title":"Киров","country":"Россия"}
 {"region":"????","id":"402","title":"Хайфа","country":"Израиль"}
 {"region":"Калининградская область","id":"61","title":"Калининград","country":"Россия"}
-{"region":null,"id":"6511","title":"","country":"Казахстан"}
-{"region":"Калининградская область","id":"293","title":"Балтийск","country":"Россия"}
-{"region":null,"id":"1048255","title":"Сосновый Бор","country":"Россия"}
-{"region":null,"id":"183","title":"Алматы","country":"Казахстан"}
-{"region":"?? ?????","id":"21508","title":"Ness Ziona","country":"Израиль"}
-{"region":null,"id":"525","title":"Сланцы","country":"Россия"}
-{"region":"West Bank","id":"3136272","title":"Nablus","coПалестинская автономия"}
-{"region":"Карагандинская область","id":"284","title":"Караганда","country":"Казахстан"}
-{"region":"Курганская область","id":"74","title":"Курган","country":"Россияuntry":""}
-{"region":"Ab&#363; Z&#807;aby","id":"1908597","title":"Abu Dhabi","country":"Объединенные Арабские Эмираты"}
-{"region":"???????","id":"2583","title":"Иерусалим","country":"Израиль"}
-{"region":"Ленинградская область","id":"1519","title":"Гатчина","country":"Россия"}
+{"region":"Курганская область","id":"74","title":"Курган","country":"Россия"}
 {"region":"Волгоградская область","id":"10","title":"Волгоград","country":"Россия"}
-{"region":null,"id":"1937246","title":"Душанбе","country":"Таджикистан"}
 {"region":"New York","id":"5420846","title":"Brooklyn","country":"США"}
-{"region":null,"id":"2642","title":"Черкассы","country":"Украина"}
 {"region":"Карелия ","id":"112","title":"Петрозаводск","country":"Россия"}
 {"region":"St&#345;edo&#269;esk&#253; Kraj","id":"1933924","title":"Praha","country":"Чехия"}
 {"region":"?????","id":"1516500","title":"Sderot","country":"Израиль"}
@@ -28,19 +13,16 @@
 {"region":"Гродненская область","id":"1113","title":"Лида","country":"Беларусь"}
 {"region":"Орловская область","id":"15885","title":"Колпна","country":"Россия"}
 {"region":"Липецкая область","id":"51","title":"Елец","country":"Россия"}
-{"region":null,"id":"1803196","title":"Sillam?e (Силламяэ)","country":"Эстония"}
 {"region":"Красноярский край","id":"260","title":"Зеленогорск","country":"Россия"}
 {"region":"??? ??","id":"1388","title":"Ramat Gan","country":"Израиль"}
 {"region":"Maryland","id":"1515867","title":"Gaithersburg","country":"США"}
 {"region":"Иркутская область","id":"1036","title":"Усть-Илимск","country":"Россия"}
 {"region":"Башкортостан ","id":"151","title":"Уфа","country":"Россия"}
-{"region":null,"id":"314","title":"Киев","country":"Украина"}
 {"region":"Кировоградская область","id":"1707343","title":"Александрия","country":"Украина"}
 {"region":"Ставропольский край","id":"1449","title":"Буденновск","country":"Россия"}
 {"region":"Удмуртская ","id":"56","title":"Ижевск","country":"Россия"}
 {"region":"Ленинградская область","id":"197","title":"Всеволожск","country":"Россия"}
 {"region":"England","id":"295","title":"London","country":"Великобритания"}
-{"region":null,"id":"9702","title":"Рудный","country":"Казахстан"}
 {"region":"Provincie Noord-Holland","id":"22168","title":"Amsterdam","country":"Нидерланды"}
 {"region":"Алтайский край","id":"25","title":"Барнаул","country":"Россия"}
 {"region":"Коми ","id":"190","title":"Воркута","country":"Россия"}
@@ -54,6 +36,24 @@
 {"region":"Донецкая область","id":"223","title":"Донецк","country":"Украина"}
 {"region":"Коми ","id":"21713","title":"Усинск","country":"Россия"}
 {"region":"Ida-Viru","id":"1803194","title":"Narva (Нарва)","country":"Эстония"}
+{"region":null,"id":"2","title":"Санкт-Петербург","country":"Россия"}
+{"region":null,"id":"6511","title":"","country":"Казахстан"}
+{"region":null,"id":"1","title":"Москва","country":"Россия"}
+{"region":"Калининградская область","id":"293","title":"Балтийск","country":"Россия"}
+{"region":null,"id":"1048255","title":"Сосновый Бор","country":"Россия"}
+{"region":null,"id":"183","title":"Алматы","country":"Казахстан"}
+{"region":"?? ?????","id":"21508","title":"Ness Ziona","country":"Израиль"}
+{"region":null,"id":"525","title":"Сланцы","country":"Россия"}
+{"region":"West Bank","id":"3136272","title":"Nablus","country":"Палестинская автономия"}
+{"region":"Карагандинская область","id":"284","title":"Караганда","country":"Казахстан"}
+{"region":"Ab&#363; Z&#807;aby","id":"1908597","title":"Abu Dhabi","country":"Объединенные Арабские Эмираты"}
+{"region":"???????","id":"2583","title":"Иерусалим","country":"Израиль"}
+{"region":"Ленинградская область","id":"1519","title":"Гатчина","country":"Россия"}
+{"region":null,"id":"1937246","title":"Душанбе","country":"Таджикистан"}
+{"region":null,"id":"2642","title":"Черкассы","country":"Украина"}
+{"region":null,"id":"1803196","title":"Sillam?e (Силламяэ)","country":"Эстония"}
+{"region":null,"id":"314","title":"Киев","country":"Украина"}
+{"region":null,"id":"9702","title":"Рудный","country":"Казахстан"}
 {"region":null,"id":"9672","title":"Малышева","country":"Россия"}
 {"region":"Мурманская область","id":"4142","title":"Кировск","country":"Россия"}
 {"region":"Абхазия","id":"1961775","title":"Гагра","country":"Грузия"}

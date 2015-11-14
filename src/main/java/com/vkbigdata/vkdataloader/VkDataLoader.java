@@ -145,6 +145,12 @@ public class VkDataLoader {
 			}
 		}
 		
+		
+		try {
+			cts.cityDBThread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		// Stop the parallel thread
 		noLimit.interrupt();
 		

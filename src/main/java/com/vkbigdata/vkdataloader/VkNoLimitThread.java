@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class VkNoLimitThread extends Thread {
 	
+	private boolean DBG = true;
+	private String TAG = "      [VkNoLimitThread]";
 	private VkApi vk;
 	private VkPrint prnt;
 	Random rand;
@@ -52,7 +54,7 @@ public class VkNoLimitThread extends Thread {
 				//Check time limit
 				stopTime = System.currentTimeMillis();
 				int time = (int)(stopTime-startTime);
-				prnt.log("     [VkNoLimitThread] Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
+				if (DBG) prnt.log(TAG+" Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
 				if (time < 340) {
 					try {
 						Thread.sleep(340 - time);
@@ -79,7 +81,7 @@ public class VkNoLimitThread extends Thread {
 		int i = rand.nextInt(100);
 		
 		if (i > 70) {
-			prnt.log("     [VkNoLimitThread] randomPause: "+i*100+"ms");
+			if (DBG) prnt.log(TAG+" randomPause: "+i*100+"ms");
 			try {
 				Thread.sleep(i*100);
 			} catch (InterruptedException e) {

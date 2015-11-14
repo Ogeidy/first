@@ -23,7 +23,7 @@ import org.json.simple.parser.ParseException;
 public class VkCityDataBase {
 	
 	private boolean DBG = true;
-	private String TAG = "[VkCityDataBase]";
+	private String TAG = "   [VkCityDataBase]";
 	private HashMap<String, String> cities;
 	private LinkedList<BufCity> bufCities;
 	private JSONArray jsArray;
@@ -136,7 +136,7 @@ public class VkCityDataBase {
 		return 0;
 	}
 	
-	Thread cityDBThread = new Thread(){
+	public Thread cityDBThread = new Thread(){
 		
 		public void run() {
 			
@@ -179,7 +179,7 @@ public class VkCityDataBase {
 								if (DBG) prnt.log(TAG+" cityTitle:"+cityTitle);
 							}
 							else {
-								System.out.println("Error: Can't get City title!");
+								if (DBG) prnt.log(TAG+" Error: Can't get City title!");
 								continue;
 							}
 						}
@@ -200,7 +200,7 @@ public class VkCityDataBase {
 								if (DBG) prnt.log(TAG+"countryTitle:"+countryTitle);
 							}
 							else {
-								System.out.println("Error: Can't get Country title!");
+								if (DBG) prnt.log(TAG+" Error: Can't get Country title!");
 								continue;
 							}
 						}
@@ -220,7 +220,7 @@ public class VkCityDataBase {
 							if (DBG) prnt.log(TAG+"cityTitleEn:"+cityTitleEn);
 						}
 						else {
-							System.out.println("Error: Can't get City title!");
+							if (DBG) prnt.log(TAG+" Error: Can't get City title!");
 							continue;
 						}
 						
@@ -234,7 +234,7 @@ public class VkCityDataBase {
 										+"&q="+cityTitleEn+"&lang=ru");
 								vk.checkTime(startTime);
 							}
-							//System.out.println(result);
+							
 							resJson = VkDataLoader.parseString(result);
 							
 							resArr = (JSONArray)((JSONObject)resJson.get("response")).get("items");
@@ -245,10 +245,10 @@ public class VkCityDataBase {
 								if ( bCt.id.equals(tmpJs.get("id").toString()) ) {
 									if (tmpJs.get("region") != null) 
 										regionTitle = tmpJs.get("region").toString();
-									if (DBG) prnt.log(TAG+"regionTitle:"+regionTitle);
 									//continue; ??
 								}
 							}
+							if (DBG) prnt.log(TAG+"regionTitle:"+regionTitle);
 						}
 						
 						//---Fill Cities----

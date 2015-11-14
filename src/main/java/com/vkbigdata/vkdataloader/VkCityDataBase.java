@@ -33,6 +33,7 @@ public class VkCityDataBase {
 	private FileWriter ctWrt;
 	private VkApi vk;
 	private VkPrint prnt;
+	public CityDBThread cityDBThread;
 	
 	private class BufCity {
 		public String id;
@@ -125,7 +126,8 @@ public class VkCityDataBase {
 		}
 		
 		if (isNewCity) {
-			if (!cityDBThread.isAlive()) {
+			if (cityDBThread == null || !cityDBThread.isAlive()) {
+				cityDBThread = new CityDBThread();
 				cityDBThread.start();
 			}
 			else {
@@ -136,7 +138,7 @@ public class VkCityDataBase {
 		return 0;
 	}
 	
-	public Thread cityDBThread = new Thread(){
+	protected class CityDBThread extends Thread{
 		
 		public void run() {
 			
@@ -161,9 +163,10 @@ public class VkCityDataBase {
 					
 					BufCity bCt = bufCities.remove();
 					
-					if (!cities.containsKey(bCt.id)) {
+					if (!cities.containsKey(bCt.id) && !bCt.countryId.equals("0") ) {
 						
 						//---Get City Title---
+						//if (DBG) prnt.log(TAG+"Get City Title");
 						if (bCt.title == null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
@@ -185,6 +188,7 @@ public class VkCityDataBase {
 						}
 						
 						//---Get Country Title---
+						//if (DBG) prnt.log(TAG+"Get Country Title");
 						if (bCt.countryTitle == null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
@@ -206,6 +210,7 @@ public class VkCityDataBase {
 						}
 						
 						//---Get City Title in English---
+						//if (DBG) prnt.log(TAG+"Get City Title in English");
 						synchronized(vk) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReq("database.getCitiesById", "city_ids="+bCt.id+"&lang=en");
@@ -227,6 +232,7 @@ public class VkCityDataBase {
 						cityTitleEn = removeSpace(cityTitleEn);
 						
 						//---Get region---
+						//if (DBG) prnt.log(TAG+"Get region bCt.countryId:"+bCt.countryId);
 						if (cityTitleEn != null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();

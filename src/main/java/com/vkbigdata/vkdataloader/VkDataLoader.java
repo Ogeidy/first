@@ -6,7 +6,7 @@ import org.json.simple.parser.ParseException;
 
 public class VkDataLoader {
 	
-	private static String CONFIG_FILE = "config_test.txt";
+	private static String CONFIG_FILE = "config_poly.txt";
 	
 	private static String OUT_FILE_PREFIX = "output-";
 	
@@ -144,7 +144,6 @@ public class VkDataLoader {
 				}
 			}
 		}
-		
 		
 		try {
 			cts.cityDBThread.join();

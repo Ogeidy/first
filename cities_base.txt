@@ -57,3 +57,127 @@
 {"region":null,"id":"9672","title":"Малышева","country":"Россия"}
 {"region":"Мурманская область","id":"4142","title":"Кировск","country":"Россия"}
 {"region":"Абхазия","id":"1961775","title":"Гагра","country":"Грузия"}
+{"region":null,"id":"14","title":"Астана","country":"Казахстан"}
+{"region":null,"id":"186","title":"Тихвин","country":"Россия"}
+{"region":"Вологодская область","id":"41","title":"Vologda","country":"Россия"}
+{"region":null,"id":"35","title":"Великий Новгород","country":"Россия"}
+{"region":null,"id":"382","title":"Нефтеюганск","country":"Россия"}
+{"region":null,"id":"8057","title":"Единцы","country":"Молдова"}
+{"region":"Челябинская область","id":"131","title":"Снежинск","country":"Россия"}
+{"region":null,"id":"3219042","title":"Lammi","country":"Финляндия"}
+{"region":"Ленинградская область","id":"248","title":"Кировск","country":"Россия"}
+{"region":"Новгородская область","id":"640","title":"Старая Русса","country":"Россия"}
+{"region":"Нижегородская область","id":"1143062","title":"Катунки","country":"Россия"}
+{"region":null,"id":"1959511","title":"Liep?ja","country":"Латвия"}
+{"region":"Хабаровский край","id":"153","title":"Хабаровск","country":"Россия"}
+{"region":"Дагестан ","id":"85","title":"Махачкала","country":"Россия"}
+{"region":"Uusimaa","id":"13981","title":"Kerava","country":"Финляндия"}
+{"region":"Санкт-Петербург город","id":"188","title":"Сестрорецк","country":"Россия"}
+{"region":"Ленинградская область","id":"79","title":"Луга","country":"Россия"}
+{"region":null,"id":"953","title":"Бельцы","country":"Молдова"}
+{"region":"Сахалинская область","id":"167","title":"Южно-Сахалинск","country":"Россия"}
+{"region":"L&#228;&#228;ne-Viru","id":"5434852","title":"Veltsi","country":"Эстония"}
+{"region":"Gulbenes novads","id":"1970752","title":"Gulbene","country":"Латвия"}
+{"region":"Киевская область","id":"11470","title":"Ирпень","country":"Украина"}
+{"region":"Псковская область","id":"1112","title":"Остров","country":"Россия"}
+{"region":null,"id":"762","title":"Ереван","country":"Армения"}
+{"region":null,"id":"1003","title":"Железногорск-Илимский","country":"Россия"}
+{"region":null,"id":"20641","title":"Темиртау","country":"Казахстан"}
+{"region":"Московская область","id":"2194","title":"Краснознаменск","country":"Россия"}
+{"region":null,"id":"7406","title":"Заозерск","country":"Россия"}
+{"region":null,"id":"154","title":"Ханты-Мансийск","country":"Россия"}
+{"region":null,"id":"621","title":"Дзержинск","country":"Россия"}
+{"region":null,"id":"1951986","title":"M?nchen","country":"Германия"}
+{"region":null,"id":"292","title":"Одесса","country":"Украина"}
+{"region":null,"id":"1969977","title":"Сухуми","country":"Грузия"}
+{"region":null,"id":"113","title":"Петропавловск-Камчатский","country":"Россия"}
+{"region":null,"id":"2417","title":"Людиново","country":"Россия"}
+{"region":null,"id":"5421165","title":"Pattaya","country":"Таиланд"}
+{"region":null,"id":"4414","title":"Лихославль","country":"Россия"}
+{"region":null,"id":"4229924","title":"Thrapston","country":"Великобритания"}
+{"region":null,"id":"919","title":"","country":"Литва"}
+{"region":null,"id":"1708303","title":"Philadelphia","country":"США"}
+{"region":null,"id":"742","title":"","country":"Таджикистан"}
+{"region":null,"id":"110","title":"Пермь","country":"Россия"}
+{"region":null,"id":"2181","title":"Чудово","country":"Россия"}
+{"region":null,"id":"1573","title":"Каменск-Уральский","country":"Россия"}
+{"region":null,"id":"143","title":"Тольятти","country":"Россия"}
+{"region":"Омская область","id":"104","title":"Омск","country":"Россия"}
+{"region":null,"id":"81","title":"Магадан","country":"Россия"}
+{"region":"Тверская область","id":"141","title":"Тверь","country":"Россия"}
+{"region":"Минская область","id":"282","title":"Минск","country":"Беларусь"}
+{"region":"Удмуртская ","id":"1100","title":"Воткинск","country":"Россия"}
+{"region":"Ленинградская область","id":"1743","title":"Кириши","country":"Россия"}
+{"region":"Ленинградская область","id":"13727","title":"Келози","country":"Россия"}
+{"region":null,"id":"358","title":"","country":"Молдова"}
+{"region":"State of New South Wales","id":"699","title":"Sydney","country":"Австралия"}
+{"region":"Витебская область","id":"244","title":"Витебск","country":"Беларусь"}
+{"region":"R&#233;gion &#206;le-de-France","id":"1937764","title":"Paris","country":"Франция"}
+{"region":null,"id":"1902815","title":"Dublin","country":"США"}
+{"region":null,"id":"1057","title":"Львов","country":"Украина"}
+{"region":null,"id":"103","title":"Обнинск","country":"Россия"}
+{"region":null,"id":"5","title":"Отрадное","country":"Россия"}
+{"region":null,"id":"87","title":"Мурманск","country":"Россия"}
+{"region":null,"id":"5982","title":"Лесогорский","country":"Россия"}
+{"region":"Ташкентская","id":"194","title":"Ташкент","country":"Узбекистан"}
+{"region":null,"id":"99","title":"Новосибирск","country":"Россия"}
+{"region":null,"id":"5266288","title":"Recklinghausen","country":"Германия"}
+{"region":null,"id":"22","title":"Архангельск","country":"Россия"}
+{"region":"Краснодарский край","id":"1186","title":"Тихорецк","country":"Россия"}
+{"region":"Архангельская область","id":"266","title":"Котлас","country":"Россия"}
+{"region":"District of Columbia","id":"1661","title":"Washington, D.C.","country":"США"}
+{"region":"Сахалинская область","id":"332","title":"Анива","country":"Россия"}
+{"region":null,"id":"1914789","title":"Montr?al","country":"Канада"}
+{"region":"Ханты-Мансийский Автономный округ - Югра АО","id":"93","title":"Нижневартовск","country":"Россия"}
+{"region":null,"id":"177","title":"Выборг","country":"Россия"}
+{"region":"Texas","id":"1068","title":"Austin","country":"США"}
+{"region":"Uusimaa","id":"5267","title":"Espoo","country":"Финляндия"}
+{"region":"Ленинградская область","id":"364","title":"Пикалево","country":"Россия"}
+{"region":"Ханты-Мансийский Автономный округ - Югра АО","id":"136","title":"Сургут","country":"Россия"}
+{"region":"Смоленская область","id":"1087404","title":"Демидов","country":"Россия"}
+{"region":"Актюбинская область","id":"1517767","title":"Актобе","country":"Казахстан"}
+{"region":"Ленинградская область","id":"18160","title":"Павлово","country":"Россия"}
+{"region":"Ленинградская область","id":"191","title":"Кингисепп","country":"Россия"}
+{"region":null,"id":"21118","title":"D?sseldorf","country":"Германия"}
+{"region":"Приморский край","id":"13197","title":"Ярославский","country":"Россия"}
+{"region":null,"id":"5530","title":"","country":"Россия"}
+{"region":"Set&#299; Zone","id":"1932487","title":"Kathmandu","country":"Непал"}
+{"region":"Ярославская область","id":"744","title":"Углич","country":"Россия"}
+{"region":null,"id":"185","title":"Севастополь","country":"Украина"}
+{"region":"Магаданская область","id":"9726","title":"Усть-Омчуг","country":"Россия"}
+{"region":"British Columbia","id":"1960291","title":"Vancouver","country":"Канада"}
+{"region":"Land Baden-W&#252;rttemberg","id":"4568484","title":"Reichenau","country":"Германия"}
+{"region":null,"id":"703","title":"Z?rich","country":"Швейцария"}
+{"region":"Kanton Basel-Stadt","id":"1904856","title":"Basel","country":"Швейцария"}
+{"region":"Ленинградская область","id":"178","title":"Сертолово","country":"Россия"}
+{"region":"Донецкая область","id":"1503167","title":"Николаевка","country":"Украина"}
+{"region":"Ханты-Мансийский Автономный округ - Югра АО","id":"2162","title":"Излучинск","country":"Россия"}
+{"region":"Мурманская область","id":"11312","title":"Ревда","country":"Россия"}
+{"region":"Ленинградская область","id":"512","title":"Светогорск","country":"Россия"}
+{"region":"Черкасская область","id":"4116","title":"Смела","country":"Украина"}
+{"region":null,"id":"3621","title":"Мирный","country":"Россия"}
+{"region":"Ленинградская область","id":"1046394","title":"Победа","country":"Россия"}
+{"region":"Ленинградская область","id":"10881","title":"Пушное","country":"Россия"}
+{"region":"Мурманская область","id":"1062","title":"Гаджиево","country":"Россия"}
+{"region":"Scotland","id":"1942267","title":"Falkirk","country":"Великобритания"}
+{"region":null,"id":"1586","title":"Бугры","country":"Россия"}
+{"region":"Мурманская область","id":"172","title":"Североморск","country":"Россия"}
+{"region":"Ростовская область","id":"139","title":"Таганрог","country":"Россия"}
+{"region":"Псковская область","id":"34","title":"Великие Луки","country":"Россия"}
+{"region":"Сырдарьинская","id":"14262","title":"Ширин","country":"Узбекистан"}
+{"region":"Архангельская область","id":"11","title":"Северодвинск","country":"Россия"}
+{"region":null,"id":"138","title":"Сыктывкар","country":"Россия"}
+{"region":"Ленинградская область","id":"199","title":"Волхов","country":"Россия"}
+{"region":"Etel&#228;-Karjala","id":"1970123","title":"Lappeenranta","country":"Финляндия"}
+{"region":"California","id":"5094472","title":"San Jose","country":"США"}
+{"region":"Приморский край","id":"37","title":"Владивосток","country":"Россия"}
+{"region":"Ленинградская область","id":"503","title":"Лодейное Поле","country":"Россия"}
+{"region":"Гродненская область","id":"649","title":"Гродно","country":"Беларусь"}
+{"region":null,"id":"430","title":"","country":"Казахстан"}
+{"region":null,"id":"3329","title":"","country":"Казахстан"}
+{"region":"Краснодарский край","id":"9642","title":"Новопокровская","country":"Россия"}
+{"region":"Томская область","id":"144","title":"Томск","country":"Россия"}
+{"region":null,"id":"187","title":"Мончегорск","country":"Россия"}
+{"region":null,"id":"543","title":"Приозерск","country":"Россия"}
+{"region":null,"id":"1516","title":"Курчатов","country":"Казахстан"}
+{"region":"Татарстан ","id":"60","title":"Казань","country":"Россия"}

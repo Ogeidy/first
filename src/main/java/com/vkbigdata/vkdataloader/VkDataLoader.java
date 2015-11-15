@@ -6,7 +6,7 @@ import org.json.simple.parser.ParseException;
 
 public class VkDataLoader {
 	
-	private static String CONFIG_FILE = "config_poly.txt";
+	private static String CONFIG_FILE = "config_poly_2.txt";
 	
 	private static String OUT_FILE_PREFIX = "output-";
 	

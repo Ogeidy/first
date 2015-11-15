@@ -203,6 +203,14 @@ public class VkApi {
 				
 				return 1;
 			} 
+			else if (code == 14) {
+				if (DBG) prnt.log(TAG+" Very Bug Pause after capcha: 64 min");
+				try { 
+					Thread.sleep(60000*64);
+				} catch (InterruptedException e) {
+					return 1;
+				}
+			}
 			else {
 				System.out.println();
 				return -1;

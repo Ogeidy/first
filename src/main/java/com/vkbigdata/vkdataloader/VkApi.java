@@ -22,6 +22,10 @@ public class VkApi {
 	private boolean DBG = true;
 	private String TAG = "   [VkApi]";
 	private String API_VERSION = "5.37";
+	private boolean isCapcha = false;
+	private String capchaId;
+	private String capchaCode;
+	
 	private VkConfig conf;
 	private VkPrint prnt;
 	
@@ -85,8 +89,12 @@ public class VkApi {
 					.replace("https", "http")
 					.replace("{METHOD_NAME}", method)
 					.replace("{PARAMETERS}", parameters)
-					.replace("&access_token={ACCESS_TOKEN}", "")
-	                + " HTTP/1.0\r\n\r\n";
+					.replace("&access_token={ACCESS_TOKEN}", "");
+			if (isCapcha) {
+				reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+				isCapcha = false;
+			}
+			reqUrl.concat(" HTTP/1.0\r\n\r\n");
 			
 			sock.getOutputStream().write(reqUrl.getBytes());
 			
@@ -133,6 +141,11 @@ public class VkApi {
 				.replace("{METHOD_NAME}", method)
 				.replace("{PARAMETERS}", parameters)
 				.replace("{ACCESS_TOKEN}", this.conf.ACCESS_TOKEN);
+		
+		if (isCapcha) {
+			reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+			isCapcha = false;
+		}
 		
 		URL url;
 		
@@ -204,12 +217,16 @@ public class VkApi {
 				return 1;
 			} 
 			else if (code == 14) {
-				if (DBG) prnt.log(TAG+" Very Bug Pause after capcha: 64 min");
-				try { 
-					Thread.sleep(60000*64);
-				} catch (InterruptedException e) {
-					return 1;
-				}
+				prnt.log(TAG+" Capcha needed!!");
+				prnt.log(TAG+data);
+				prnt.log(TAG+" Write below CapchaId and code from picture");
+				
+				Scanner in = new Scanner(System.in);
+				capchaId = in.next();
+				capchaCode = in.next();
+				in.close();
+				isCapcha = true;
+				return 1;
 			}
 			else {
 				System.out.println();

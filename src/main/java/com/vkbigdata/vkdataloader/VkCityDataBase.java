@@ -33,6 +33,7 @@ public class VkCityDataBase {
 	private FileWriter ctWrt;
 	private VkApi vk;
 	private VkPrint prnt;
+	
 	public CityDBThread cityDBThread;
 	
 	private class BufCity {

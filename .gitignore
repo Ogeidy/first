@@ -1,5 +1,5 @@
 output*
 *.log
 *.rar
-cities_base.txt
+cities_base*
 target

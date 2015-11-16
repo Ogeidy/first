@@ -163,7 +163,7 @@ public class VkCityDataBase {
 					
 					BufCity bCt = bufCities.remove();
 					
-					if (!cities.containsKey(bCt.id) && !bCt.countryId.equals("0") ) {
+					if (!cities.containsKey(bCt.id) && bCt.countryId != null && !bCt.countryId.equals("0") ) {
 						
 						try {
 							Thread.sleep(300);

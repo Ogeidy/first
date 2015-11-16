@@ -200,8 +200,8 @@ public class VkApi {
 			if (DBG) prnt.log(TAG+" Error code: " + code);
 			
 			if (code == 5){
-				if (DBG) prnt.log(TAG+" User authorization failed!");
-				if (DBG) prnt.log(TAG+" Confirm your agreement to accessto some data, copy here access token form address line:");
+				prnt.log(TAG+" User authorization failed!");
+				prnt.log(TAG+" Confirm your agreement to accessto some data, copy here access token form address line:");
 
 				try {
 					auth();

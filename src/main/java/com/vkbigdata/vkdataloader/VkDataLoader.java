@@ -12,6 +12,8 @@ public class VkDataLoader {
 	
 	private static String LOG_FILE = "VkDataLoader.log";
 	
+	private static String BASE_FILE = "cities_base.txt";
+	
 	private static VkConfig conf;
 	private static VkApi vk;
 	private static VkPrint prnt;
@@ -26,7 +28,7 @@ public class VkDataLoader {
 		conf.readConfig();  //Reading config file
 		prnt = new VkPrint(OUT_FILE_PREFIX+".txt", LOG_FILE);
 		vk = new VkApi(conf, prnt);
-		cts = new VkCityDataBase("cities_base.txt", vk, prnt);
+		cts = new VkCityDataBase(BASE_FILE, vk, prnt);
 		noLimit = new VkNoLimitThread(vk, prnt);
 		
 		JSONParser parser = new JSONParser();
@@ -57,7 +59,6 @@ public class VkDataLoader {
 					try {
 						Thread.sleep(20000);
 					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
 					synchronized(vk) {

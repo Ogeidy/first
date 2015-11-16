@@ -80,7 +80,6 @@ public class VkApi {
 	public String sendReq(String method, String parameters){
 		
 		String data = null;
-		
 		try {
 			Socket sock = new Socket("api.vk.com", 80);
 			
@@ -91,10 +90,10 @@ public class VkApi {
 					.replace("{PARAMETERS}", parameters)
 					.replace("&access_token={ACCESS_TOKEN}", "");
 			if (isCapcha) {
-				reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+				reqUrl = reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
 				isCapcha = false;
 			}
-			reqUrl.concat(" HTTP/1.0\r\n\r\n");
+			reqUrl = reqUrl.concat(" HTTP/1.0\r\n\r\n");
 			
 			sock.getOutputStream().write(reqUrl.getBytes());
 			
@@ -143,7 +142,7 @@ public class VkApi {
 				.replace("{ACCESS_TOKEN}", this.conf.ACCESS_TOKEN);
 		
 		if (isCapcha) {
-			reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+			reqUrl = reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
 			isCapcha = false;
 		}
 		

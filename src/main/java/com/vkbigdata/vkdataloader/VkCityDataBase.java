@@ -165,8 +165,15 @@ public class VkCityDataBase {
 					
 					if (!cities.containsKey(bCt.id) && !bCt.countryId.equals("0") ) {
 						
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
+						
 						//---Get City Title---
 						if (bCt.title == null) {
+							//if (DBG) prnt.log(TAG+"Get City Title");
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
 								result = vk.sendReq("database.getCitiesById", "city_ids="+bCt.id);
@@ -186,8 +193,14 @@ public class VkCityDataBase {
 							}
 						}
 						
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
 						//---Get Country Title---
 						if (bCt.countryTitle == null) {
+							//if (DBG) prnt.log(TAG+"Get Country Title");
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
 								result = vk.sendReq("database.getCountriesById", "country_ids="+bCt.countryId);
@@ -207,7 +220,13 @@ public class VkCityDataBase {
 							}
 						}
 						
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
 						//---Get City Title in English---
+						//if (DBG) prnt.log(TAG+"Get City Title in English");
 						synchronized(vk) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReq("database.getCitiesById", "city_ids="+bCt.id+"&lang=en");
@@ -228,7 +247,13 @@ public class VkCityDataBase {
 						
 						cityTitleEn = removeSpace(cityTitleEn);
 						
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
 						//---Get region---
+						//if (DBG) prnt.log(TAG+"Get region");
 						if (cityTitleEn != null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();

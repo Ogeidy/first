@@ -50,7 +50,7 @@ public class VkNoLimitThread extends Thread {
 			synchronized(vk) {
 				startTime = System.currentTimeMillis();
 				vk.sendReqS(reqs[i][0], reqs[i][1]);
-				
+				//vk.sendReqS("captcha.force", "");
 				//Check time limit
 				stopTime = System.currentTimeMillis();
 				int time = (int)(stopTime-startTime);

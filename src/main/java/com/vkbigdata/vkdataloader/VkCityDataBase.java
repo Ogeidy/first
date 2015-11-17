@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -157,7 +158,6 @@ public class VkCityDataBase {
 					ctWrt = new FileWriter(ctFile, true);
 					
 					String cityTitle = null;
-					String cityTitleEn = null;
 					String countryTitle = null;
 					String regionTitle = null;
 					
@@ -225,40 +225,19 @@ public class VkCityDataBase {
 						} catch (InterruptedException e1) {
 							e1.printStackTrace();
 						}
-						//---Get City Title in English---
-						//if (DBG) prnt.log(TAG+"Get City Title in English");
-						synchronized(vk) {
-							startTime = System.currentTimeMillis();
-							result = vk.sendReq("database.getCitiesById", "city_ids="+bCt.id+"&lang=en");
-							vk.checkTime(startTime);
-						}
-						
-						resJson = VkDataLoader.parseString(result);
-						
-						if (resJson != null) {
-							if ( !((JSONArray)resJson.get("response")).isEmpty() )
-								cityTitleEn = ((JSONObject)((JSONArray)resJson.get("response")).get(0)).get("title").toString();
-							if (DBG) prnt.log(TAG+"cityTitleEn:"+cityTitleEn);
-						}
-						else {
-							if (DBG) prnt.log(TAG+" Error: Can't get City title!");
-							continue;
-						}
-						
-						cityTitleEn = removeSpace(cityTitleEn);
-						
-						try {
-							Thread.sleep(300);
-						} catch (InterruptedException e1) {
-							e1.printStackTrace();
-						}
 						//---Get region---
 						//if (DBG) prnt.log(TAG+"Get region");
-						if (cityTitleEn != null) {
+						if (cityTitle != null) {
 							synchronized(vk) {
 								startTime = System.currentTimeMillis();
-								result = vk.sendReq("database.getCities", "country_id="+bCt.countryId
-										+"&q="+cityTitleEn+"&lang=ru");
+								if (bCt.title == null) {
+									result = vk.sendReq("database.getCities", "country_id="+bCt.countryId
+											+"&q="+URLEncoder.encode(cityTitle,"UTF-8")+"&lang=ru");
+								}
+								else {
+									result = vk.sendReq("database.getCities", "country_id="+bCt.countryId
+											+"&q="+URLEncoder.encode(bCt.title,"UTF-8")+"&lang=ru");
+								}
 								vk.checkTime(startTime);
 							}
 							
@@ -341,22 +320,6 @@ public class VkCityDataBase {
 		}
 		
 		return 0;
-	}
-	
-	public static String removeSpace(String input) {
-		
-		if (input != null) {
-			StringBuffer stb = new StringBuffer(input);
-			for (int i = 0; i < stb.length(); i++) {
-				if (stb.charAt(i) == ' '){
-					stb.replace(i, i+1, "%20");
-				}
-			}
-			return stb.toString();
-		}
-		else {
-			return null;
-		}
 	}
 
 }

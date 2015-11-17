@@ -3,10 +3,12 @@ import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -21,7 +23,7 @@ public class VkApi {
 	
 	private boolean DBG = true;
 	private String TAG = "   [VkApi]";
-	private String API_VERSION = "5.37";
+	private String API_VERSION = "5.40";
 	private boolean isCapcha = false;
 	private String capchaId;
 	private String capchaCode;
@@ -138,13 +140,19 @@ public class VkApi {
 		
 		String reqUrl = API_REQUEST
 				.replace("{METHOD_NAME}", method)
-				.replace("{PARAMETERS}", parameters)
+				//.replace("{PARAMETERS}", parameters);
 				.replace("{ACCESS_TOKEN}", this.conf.ACCESS_TOKEN);
 		
 		if (isCapcha) {
-			reqUrl = reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+			//reqUrl = reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+			reqUrl = reqUrl.replace("{PARAMETERS}", parameters+"&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
 			isCapcha = false;
 		}
+		else {
+			reqUrl = reqUrl.replace("{PARAMETERS}", parameters);
+		}
+		
+		//System.out.println(reqUrl);
 		
 		URL url;
 		
@@ -211,7 +219,7 @@ public class VkApi {
 				Scanner in = new Scanner(System.in);
 				String indata = in.next();
 				conf.setAccessToken(indata);
-				in.close();
+				//in.close();
 				
 				return 1;
 			} 
@@ -220,10 +228,18 @@ public class VkApi {
 				prnt.log(TAG+data);
 				prnt.log(TAG+" Write below CapchaId and code from picture");
 				
-				Scanner in = new Scanner(System.in);
-				capchaId = in.next();
-				capchaCode = in.next();
-				in.close();
+				Scanner inp = new Scanner(System.in);
+				if (inp.hasNext()) {
+					capchaId = inp.next();
+					//capchaCode = inp.next();
+					try {
+						capchaCode = URLEncoder.encode(inp.next(),"UTF-8");
+					} catch (UnsupportedEncodingException e) {
+						e.printStackTrace();
+					}
+					//System.in.
+				}
+				//in.close();
 				isCapcha = true;
 				return 1;
 			}

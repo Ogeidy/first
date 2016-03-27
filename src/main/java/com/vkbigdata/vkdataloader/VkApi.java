@@ -24,7 +24,7 @@ public class VkApi {
 	private boolean DBG = true;
 	private String TAG = "   [VkApi]";
 	private String API_VERSION = "5.40";
-	private boolean isCapcha = false;
+	private boolean isCapcha = false; 
 	private String capchaId;
 	private String capchaCode;
 	
@@ -97,16 +97,16 @@ public class VkApi {
 			}
 			reqUrl = reqUrl.concat(" HTTP/1.0\r\n\r\n");
 			
-			sock.getOutputStream().write(reqUrl.getBytes());
+			sock.getOutputStream().write(reqUrl.getBytes("UTF-8"));
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream(),"utf-8"));
+			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream(),"UTF-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){
 					data+=input;
 				}
 			}
-			
+			br.close();
 			sock.close();
 		}catch (MalformedURLException e) {
 			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
@@ -168,7 +168,7 @@ public class VkApi {
 					data+=input;
 				}
 			}
-			
+			br.close();
 			con.disconnect();
 			
 		}catch (MalformedURLException e) {

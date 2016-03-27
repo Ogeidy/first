@@ -1,12 +1,15 @@
 package main.java.com.vkbigdata.vkdataloader;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -31,13 +34,13 @@ public class VkCityDataBase {
 	
 	private File ctFile;
 	private BufferedReader ctRd;
-	private FileWriter ctWrt;
+	private BufferedWriter ctWrt;
 	private VkApi vk;
 	private VkPrint prnt;
 	
 	public CityDBThread cityDBThread;
 	
-	private class BufCity {
+	private static class BufCity {
 		public String id;
 		public String title;
 		public String countryId;
@@ -155,7 +158,8 @@ public class VkCityDataBase {
 				
 				while (!bufCities.isEmpty()) {
 					
-					ctWrt = new FileWriter(ctFile, true);
+					ctWrt =  new BufferedWriter(new OutputStreamWriter(
+					        new FileOutputStream(ctFile), "UTF-8"));//new FileWriter(ctFile, true);
 					
 					String cityTitle = null;
 					String countryTitle = null;
@@ -292,7 +296,7 @@ public class VkCityDataBase {
 		JSONObject rdJson = null;
 		
 		try {
-			ctRd = new BufferedReader(new InputStreamReader(new FileInputStream(ctFile)));
+			ctRd = new BufferedReader(new InputStreamReader(new FileInputStream(ctFile),"UTF-8"));
 			
 			while ((s = ctRd.readLine()) != null) {
 				

@@ -1,7 +1,10 @@
 package main.java.com.vkbigdata.vkdataloader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -58,11 +61,12 @@ public class VkPrint {
 		
 		if (logFile != null) {
 		
-			FileWriter wrtFile = null;
+			BufferedWriter wrtFile = null;
 			
 			
 			try {
-				wrtFile = new FileWriter(logFile, true);
+				wrtFile = new BufferedWriter(new OutputStreamWriter(
+				        new FileOutputStream(logFile), "UTF-8")); //new FileWriter(logFile, true);
 			} catch (IOException e) {
 				System.out.println("Error: Can't open log file!");
 				e.printStackTrace();
@@ -92,10 +96,11 @@ public class VkPrint {
 	 */
 	public int print(String str) {
 		
-		FileWriter wrtFile = null;
+		BufferedWriter wrtFile = null;
 		
 		try {
-			wrtFile = new FileWriter(outFile, true);
+			wrtFile = new BufferedWriter(new OutputStreamWriter(
+			        new FileOutputStream(outFile), "UTF-8")); //new FileWriter(outFile, true);
 		} catch (IOException e) {
 			System.out.println("Error: Can't open file!");
 			e.printStackTrace();
@@ -122,13 +127,14 @@ public class VkPrint {
 	 */
 	public int printResult(String result) {
 		
-		FileWriter wrtFile = null;
+		BufferedWriter wrtFile = null;
 		JSONParser parser = new JSONParser();
-		JSONObject resJson = new JSONObject();
-		JSONArray array = new JSONArray();
+		JSONObject resJson = null;
+		JSONArray array = null;
 		
 		try {
-			wrtFile = new FileWriter(outFile, true);
+			wrtFile = new BufferedWriter(new OutputStreamWriter(
+			        new FileOutputStream(outFile), "UTF-8")); //new FileWriter(outFile, true);
 		} catch (IOException e) {
 			System.out.println("Error: Can't open file!");
 			e.printStackTrace();

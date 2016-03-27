@@ -32,7 +32,7 @@ public class VkDataLoader {
 		noLimit = new VkNoLimitThread(vk, prnt);
 		
 		JSONParser parser = new JSONParser();
-		JSONObject resJson = new JSONObject();
+		JSONObject resJson = null;
 		String result = null;	
 		long startTime;
 		
@@ -164,7 +164,7 @@ public class VkDataLoader {
 	public static JSONObject parseString(String input) {
 		
 		JSONParser parser = new JSONParser();
-		JSONObject resJson = new JSONObject();
+		JSONObject resJson = null;
 		
 		try {
 			resJson = (JSONObject)parser.parse(input);

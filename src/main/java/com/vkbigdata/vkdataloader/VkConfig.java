@@ -1,11 +1,14 @@
 package main.java.com.vkbigdata.vkdataloader;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -27,7 +30,7 @@ public class VkConfig {
 	public JSONObject[] faculties;
 	private File configFile;
 	private BufferedReader cfgRd;
-	private FileWriter cfgWrt;
+	private BufferedWriter cfgWrt;
 	
 	/**
 	 * Creates a new <code>VkConfig</code> instance 
@@ -49,7 +52,7 @@ public class VkConfig {
 		int it = 0;
 		
 		try {
-			cfgRd = new BufferedReader(new InputStreamReader(new FileInputStream(configFile)));
+			cfgRd = new BufferedReader(new InputStreamReader(new FileInputStream(configFile), "UTF-8"));
 			/*
 			 * If happened troubles with encoding
 			 * new InputStreamReader(new FileInputStream(configFile),"utf-8")
@@ -121,7 +124,8 @@ public class VkConfig {
 		this.ACCESS_TOKEN = accessToken;
 		
 		try {
-			cfgWrt = new FileWriter(configFile);
+			cfgWrt = new BufferedWriter(new OutputStreamWriter(
+			        new FileOutputStream(configFile), "UTF-8")); //new FileWriter(configFile);
 			
 			cfgWrt.append("APP_ID = "+APP_ID+"\n");
 			cfgWrt.append("ACCESS_TOKEN = "+ACCESS_TOKEN+"\n");

@@ -159,7 +159,7 @@ public class VkCityDataBase {
 				while (!bufCities.isEmpty()) {
 					
 					ctWrt =  new BufferedWriter(new OutputStreamWriter(
-					        new FileOutputStream(ctFile), "UTF-8"));//new FileWriter(ctFile, true);
+					        new FileOutputStream(ctFile, true), "UTF-8"));//new FileWriter(ctFile, true);
 					
 					String cityTitle = null;
 					String countryTitle = null;

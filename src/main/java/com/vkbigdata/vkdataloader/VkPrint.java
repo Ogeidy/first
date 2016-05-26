@@ -148,7 +148,8 @@ public class VkPrint {
 		} catch (ParseException e) {
 			System.out.println("Error: Can't parse the response!");
 			e.printStackTrace();
-			System.exit(1);
+			return 1;
+			//System.exit(1);
 		}
 		
 		//System.out.println(result);

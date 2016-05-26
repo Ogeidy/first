@@ -117,7 +117,6 @@ public class VkDataLoader {
 							try {
 								Thread.sleep(20000);
 							} catch (InterruptedException e1) {
-								// TODO Auto-generated catch block
 								e1.printStackTrace();
 							}
 							synchronized(vk) {
@@ -170,8 +169,8 @@ public class VkDataLoader {
 			resJson = (JSONObject)parser.parse(input);
 		} catch (ParseException e) {
 			System.out.println("Error: Can't parse the response!");
-			e.printStackTrace();
-			System.exit(1);
+			//e.printStackTrace();
+			//System.exit(1);
 		}
 		
 		return resJson;

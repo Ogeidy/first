@@ -83,7 +83,8 @@ public class VkNoLimitThread extends Thread {
 		if (i>97) {
 			if (DBG) prnt.log(TAG+" Random Big Pause: 5 min");
 			try { 
-				Thread.sleep(60000*5);
+				//Thread.sleep(60000*5);
+				Thread.sleep(60000);
 			} catch (InterruptedException e) {
 				return;
 			}

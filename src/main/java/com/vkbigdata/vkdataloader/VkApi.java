@@ -50,6 +50,10 @@ public class VkApi {
 	 */
 	public VkApi(VkConfig conf,  VkPrint vkPrnt){
 		
+		if (conf == null || vkPrnt == null) {
+			throw new IllegalArgumentException();
+		}
+		
 		this.conf = conf;
 		this.prnt = vkPrnt;
 		
@@ -60,11 +64,13 @@ public class VkApi {
 	 * @throws IOException
 	 */
 	public void auth() throws IOException{
+		
 		String reqUrl = AUTH_URL
                 .replace("{APP_ID}", this.conf.APP_ID)
                 .replace("{PERMISSIONS}", "photos,messages,audio,status,groups,friends")
                 .replace("{DISPLAY}", "page");
         try {
+        	/* Running the default browser with 'reqUrl' for getting access token */
             Desktop.getDesktop().browse(new URL(reqUrl).toURI());
         } catch (URISyntaxException ex) {
         	if (DBG) prnt.log(TAG+" Can't open browser. Exception:"+ex);
@@ -99,7 +105,8 @@ public class VkApi {
 			
 			sock.getOutputStream().write(reqUrl.getBytes("UTF-8"));
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream(),"UTF-8"));
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader(sock.getInputStream(),"UTF-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){
@@ -140,19 +147,16 @@ public class VkApi {
 		
 		String reqUrl = API_REQUEST
 				.replace("{METHOD_NAME}", method)
-				//.replace("{PARAMETERS}", parameters);
 				.replace("{ACCESS_TOKEN}", this.conf.ACCESS_TOKEN);
 		
 		if (isCapcha) {
-			//reqUrl = reqUrl.concat("&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
-			reqUrl = reqUrl.replace("{PARAMETERS}", parameters+"&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
+			reqUrl = reqUrl.replace("{PARAMETERS}", 
+					parameters+"&captcha_sid="+capchaId+"&captcha_key="+capchaCode);
 			isCapcha = false;
 		}
 		else {
 			reqUrl = reqUrl.replace("{PARAMETERS}", parameters);
 		}
-		
-		//System.out.println(reqUrl);
 		
 		URL url;
 		
@@ -161,7 +165,8 @@ public class VkApi {
 			
 			HttpsURLConnection con =(HttpsURLConnection)url.openConnection();
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(),"utf-8"));
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader(con.getInputStream(),"utf-8"));
 			if ((data = br.readLine()) != null){
 				String input;
 				while ((input = br.readLine()) != null){
@@ -203,16 +208,19 @@ public class VkApi {
 			return 1;
 		
 		if (data.contains("{\"error\":")){
-			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")+14,data.indexOf(",\"error_msg\":")));
+			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")
+					+ 14,data.indexOf(",\"error_msg\":")));
 			if (DBG) prnt.log(TAG+" Error code: " + code);
 			
 			if (code == 5){
 				prnt.log(TAG+" User authorization failed!");
-				prnt.log(TAG+" Confirm your agreement to accessto some data, copy here access token form address line:");
+				prnt.log(TAG+" Confirm your agreement to accessto some data, "
+						+ "copy here access token form address line:");
 
 				try {
 					auth();
 				} catch (IOException e) {
+					if (DBG) prnt.log(TAG+" Can't authenticate. Exception:"+e);
 					e.printStackTrace();
 				}
 				
@@ -231,13 +239,12 @@ public class VkApi {
 				Scanner inp = new Scanner(System.in);
 				if (inp.hasNext()) {
 					capchaId = inp.next();
-					//capchaCode = inp.next();
 					try {
 						capchaCode = URLEncoder.encode(inp.next(),"UTF-8");
 					} catch (UnsupportedEncodingException e) {
+						if (DBG) prnt.log(TAG+" Can't read capcha. Exception:"+e);
 						e.printStackTrace();
 					}
-					//System.in.
 				}
 				//in.close();
 				isCapcha = true;
@@ -266,6 +273,7 @@ public class VkApi {
 			try {
 				Thread.sleep(340 - time);
 			} catch (InterruptedException e) {
+				if (DBG) prnt.log(TAG+" Can't check time. Exception:"+e);
 				e.printStackTrace();
 			}
 		}

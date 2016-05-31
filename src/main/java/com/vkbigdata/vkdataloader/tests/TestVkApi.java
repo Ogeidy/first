@@ -31,7 +31,6 @@ public class TestVkApi {
 		vk = new VkApi(conf, prnt);
 	}
 
-	@Ignore
 	@Test
 	public void testAuth() {
 		
@@ -80,7 +79,6 @@ public class TestVkApi {
 		assertEquals("{\"response\":[{\"id\":1,\"first_name\":\"Павел\",\"last_name\":\"Дуров\"}]}", result);
 	}
 	
-	@Ignore
 	@Test
 	public void testSendReqS() {
 		
@@ -93,7 +91,7 @@ public class TestVkApi {
 				+"&university_year="+conf.yearFrom
 				+"&fields=sex,bdate&count=1");
 		//System.out.println("result: " + result);
-		assertEquals("{\"response\":{\"count\":514,\"items\":[{\"id\":6492,\"first_name\":\"Андрей\","
+		assertEquals("{\"response\":{\"count\":513,\"items\":[{\"id\":6492,\"first_name\":\"Андрей\","
 				+ "\"last_name\":\"Рогозов\",\"sex\":2,\"bdate\":\"11.11\"}]}}"
 				, result);
 	}

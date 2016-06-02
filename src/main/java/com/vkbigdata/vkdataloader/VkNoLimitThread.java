@@ -2,6 +2,9 @@ package main.java.com.vkbigdata.vkdataloader;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class VkNoLimitThread extends Thread {
 	
 	private boolean DBG = true;
@@ -9,6 +12,8 @@ public class VkNoLimitThread extends Thread {
 	private VkApi vk;
 	private VkPrint prnt;
 	Random rand;
+	
+	private static final Logger log = LogManager.getLogger(VkNoLimitThread.class.getSimpleName());
 	
 	private int NUM = 18;  //Size of reqs array
 	private String reqs[][] = {{"friends.getOnline", "user_id=1&count=5"},
@@ -54,7 +59,8 @@ public class VkNoLimitThread extends Thread {
 				//Check time limit
 				stopTime = System.currentTimeMillis();
 				int time = (int)(stopTime-startTime);
-				if (DBG) prnt.log(TAG+" Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
+				//if (DBG) prnt.log(TAG+" Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
+				log.info("Slipped: "+timeSleep+", Num: "+i+", Time: "+time+"ms");
 				if (time < 340) {
 					try {
 						Thread.sleep(340 - time);
@@ -81,16 +87,18 @@ public class VkNoLimitThread extends Thread {
 		int i = rand.nextInt(100);
 		
 		if (i>97) {
-			if (DBG) prnt.log(TAG+" Random Big Pause: 5 min");
+			//if (DBG) prnt.log(TAG+" Random Big Pause: 5 min");
+			log.info("Random Big Pause: 5 min");
 			try { 
-				//Thread.sleep(60000*5);
-				Thread.sleep(60000);
+				Thread.sleep(60000*5);
+				//Thread.sleep(60000);
 			} catch (InterruptedException e) {
 				return;
 			}
 		} 
 		else if (i > 70) {
-			if (DBG) prnt.log(TAG+" randomPause: "+i*100+"ms");
+			//if (DBG) prnt.log(TAG+" randomPause: "+i*100+"ms");
+			log.info("randomPause: "+i*100+"ms");
 			try {
 				Thread.sleep(i*100);
 			} catch (InterruptedException e) {

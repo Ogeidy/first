@@ -8,6 +8,8 @@ import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.util.Date;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -23,6 +25,8 @@ public class VkPrint {
 	private File outFile;
 	
 	private File logFile;
+	
+	private static final Logger log = LogManager.getLogger(VkPrint.class.getSimpleName());
 	
 	/**
 	 * Creates a new <code>VkPrint</code> instance.
@@ -136,8 +140,9 @@ public class VkPrint {
 			wrtFile = new BufferedWriter(new OutputStreamWriter(
 			        new FileOutputStream(outFile), "UTF-8")); //new FileWriter(outFile, true);
 		} catch (IOException e) {
-			System.out.println("Error: Can't open file!");
-			e.printStackTrace();
+//			System.out.println("Error: Can't open file!");
+//			e.printStackTrace();
+			log.fatal("Can't open file!");
 			System.exit(1);
 		}
 		
@@ -146,15 +151,18 @@ public class VkPrint {
 			array = (JSONArray)((JSONObject)resJson.get("response")).get("items");
 			
 		} catch (ParseException e) {
-			System.out.println("Error: Can't parse the response!");
-			e.printStackTrace();
+			//System.out.println("Error: Can't parse the response!");
+			//e.printStackTrace();
+			log.warn("Can't parse the response!");
 			return 1;
 			//System.exit(1);
 		}
 		
 		//System.out.println(result);
-		log("Count: "+((JSONObject)resJson.get("response")).get("count"));
-		log("Number of items:" + array.size());
+//		log("Count: "+((JSONObject)resJson.get("response")).get("count"));
+//		log("Number of items:" + array.size());
+		log.info("Print results, Count: "+((JSONObject)resJson.get("response")).get("count")
+				+ ", Number of items:" + array.size());
 		
 		try {
 			wrtFile.append("Count: "+((JSONObject)resJson.get("response")).get("count")+"\n");

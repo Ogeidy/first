@@ -1,8 +1,13 @@
 package main.java.com.vkbigdata.vkdataloader;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import main.java.com.vkbigdata.vkdataloader.tests.TestVkDataLoader;
 
 public class VkDataLoader {
 	
@@ -12,7 +17,7 @@ public class VkDataLoader {
 	
 	private static String LOG_FILE = "VkDataLoader.log";
 	
-	private static String BASE_FILE = "cities_base.txt";
+	private static String BASE_FILE = "cities_bas44e2.txt";
 	
 	private static VkConfig conf;
 	private static VkApi vk;
@@ -20,9 +25,11 @@ public class VkDataLoader {
 	private static VkCityDataBase cts;
 	private static VkNoLimitThread noLimit;
 	
-	
+	private static final Logger log = LogManager.getLogger(VkDataLoader.class.getSimpleName());
 	
 	public static void main(String[] args) {
+		
+		log.info("Initialize variables...");
 		
 		conf = new VkConfig(CONFIG_FILE);
 		conf.readConfig();  //Reading config file
@@ -36,18 +43,21 @@ public class VkDataLoader {
 		String result = null;	
 		long startTime;
 		
+		log.info("Starting the parallel thread");
 		// Start the parallel thread
 		noLimit.start();
 		
-		prnt.log("#### Start the program ####");
+		//prnt.log("#### Start the program ####");
 		
+		log.info("Starting the main loop");
 		for (int i = 0; i < conf.universityNum; i++) {
 
 			int Uni = Integer.parseInt(conf.universities[i].get("id").toString());
 			int numFcts = Integer.parseInt(((JSONObject)conf.faculties[i].get("response")).get("count").toString());
 			prnt = new VkPrint(OUT_FILE_PREFIX+Uni+".txt", LOG_FILE);
 			
-			prnt.log("**** University ID: "+Uni+" ****");
+			//prnt.log("**** University ID: "+Uni+" ****");
+			log.info("**** Processing " + Uni + " university **** ");
 			
 			for (int j = 0; j < numFcts; j++){
 				
@@ -62,8 +72,10 @@ public class VkDataLoader {
 						e1.printStackTrace();
 					}
 					synchronized(vk) {
-						prnt.log("----------------------------");
-						prnt.log("<Uni:"+Uni+" Fct:"+idFct+" Year:"+k+">");
+//						prnt.log("----------------------------");
+//						prnt.log("<Uni:"+Uni+" Fct:"+idFct+" Year:"+k+">");
+						log.info("----------------------------");
+						log.info("<Uni:"+Uni+" Fct:"+idFct+" Year:"+k+">");
 						
 						startTime = System.currentTimeMillis();
 						result = vk.sendReqS("users.search", "university="+Uni
@@ -76,7 +88,8 @@ public class VkDataLoader {
 					try {
 						resJson = (JSONObject)parser.parse(result);
 					} catch (ParseException e) {
-						prnt.log("Error: Can't parse the response!");
+						//prnt.log("Error: Can't parse the response!");
+						log.fatal("Can't parse the response!");
 						e.printStackTrace();
 						System.exit(1);
 					}
@@ -94,7 +107,8 @@ public class VkDataLoader {
 						synchronized(vk) {
 							startTime = System.currentTimeMillis();
 							result = vk.sendReqS("database.getChairs", "faculty_id="+idFct+"&count=1000");
-							prnt.log("Getted chairs");
+							//prnt.log("Getted chairs");
+							log.info("Getted chairs");
 							vk.checkTime(startTime);
 						}
 						
@@ -102,7 +116,8 @@ public class VkDataLoader {
 							resJson = (JSONObject)parser.parse(result);
 							
 						} catch (ParseException e) {
-							prnt.log("Error: Can't parse the response!");
+							//prnt.log("Error: Can't parse the response!");
+							log.fatal("Can't parse the response!");
 							e.printStackTrace();
 							System.exit(1);
 						}
@@ -120,8 +135,11 @@ public class VkDataLoader {
 								e1.printStackTrace();
 							}
 							synchronized(vk) {
-								prnt.log("^^^^");
-								prnt.log("*ID Chair:"+idChr);
+//								prnt.log("^^^^");
+//								prnt.log("*ID Chair:"+idChr);
+								log.info("^^^^");
+								log.info("*ID Chair:"+idChr);
+								
 								
 								startTime = System.currentTimeMillis();
 								result = vk.sendReqS("users.search", "university="+Uni

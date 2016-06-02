@@ -14,6 +14,8 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -39,6 +41,8 @@ public class VkCityDataBase {
 	private VkPrint prnt;
 	
 	public CityDBThread cityDBThread;
+	
+	private static final Logger log = LogManager.getLogger(VkCityDataBase.class.getSimpleName());
 	
 	private static class BufCity {
 		public String id;
@@ -136,7 +140,8 @@ public class VkCityDataBase {
 				cityDBThread.start();
 			}
 			else {
-				if (DBG) prnt.log(TAG+" cityDBThread already running!!");
+				//if (DBG) prnt.log(TAG+" cityDBThread already running!!");
+				log.info("cityDBThread already running!!");
 			}
 		}
 	
@@ -145,9 +150,12 @@ public class VkCityDataBase {
 	
 	protected class CityDBThread extends Thread{
 		
+		private final Logger log = LogManager.getLogger(CityDBThread.class.getSimpleName());
+		
 		public void run() {
 			
-			prnt.log(TAG+" cityDBThread started");
+			//prnt.log(TAG+" cityDBThread started");
+			log.info("cityDBThread started");
 			
 			try {
 				
@@ -189,10 +197,12 @@ public class VkCityDataBase {
 							if (resJson != null) {
 								if ( !((JSONArray)resJson.get("response")).isEmpty() )
 									cityTitle = ((JSONObject)((JSONArray)resJson.get("response")).get(0)).get("title").toString();
-								if (DBG) prnt.log(TAG+" cityTitle:"+cityTitle);
+								//if (DBG) prnt.log(TAG+" cityTitle:"+cityTitle);
+								log.info("cityTitle:"+cityTitle);
 							}
 							else {
-								if (DBG) prnt.log(TAG+" Error: Can't get City title!");
+								//if (DBG) prnt.log(TAG+" Error: Can't get City title!");
+								log.warn("Can't get City title!");
 								continue;
 							}
 						}
@@ -216,10 +226,12 @@ public class VkCityDataBase {
 							if (resJson != null) {
 								if ( !((JSONArray)resJson.get("response")).isEmpty() )
 									countryTitle = ((JSONObject)((JSONArray)resJson.get("response")).get(0)).get("title").toString();
-								if (DBG) prnt.log(TAG+"countryTitle:"+countryTitle);
+								//if (DBG) prnt.log(TAG+"countryTitle:"+countryTitle);
+								log.info("countryTitle:"+countryTitle);
 							}
 							else {
-								if (DBG) prnt.log(TAG+" Error: Can't get Country title!");
+								//if (DBG) prnt.log(TAG+" Error: Can't get Country title!");
+								log.warn("Can't get Country title!");
 								continue;
 							}
 						}
@@ -258,7 +270,8 @@ public class VkCityDataBase {
 									//continue; ??
 								}
 							}
-							if (DBG) prnt.log(TAG+"regionTitle:"+regionTitle);
+							//if (DBG) prnt.log(TAG+"regionTitle:"+regionTitle);
+							log.info("regionTitle:"+regionTitle);
 						}
 						
 						//---Fill Cities----
@@ -281,7 +294,8 @@ public class VkCityDataBase {
 				e.printStackTrace();
 			}
 			
-			prnt.log(TAG+" cityDBThread stopped");
+			//prnt.log(TAG+" cityDBThread stopped");
+			log.info("cityDBThread stopped");
 		}
 		
 	};
@@ -292,6 +306,7 @@ public class VkCityDataBase {
 	 */
 	private int readBase() {
 		
+		log.info("Reading base of sities");
 		String s;
 		JSONObject rdJson = null;
 		
@@ -303,7 +318,9 @@ public class VkCityDataBase {
 				try {
 					rdJson = (JSONObject)(new JSONParser()).parse(s);
 				} catch (ParseException e) {
-					e.printStackTrace();
+					log.warn("Can't read data base: " + e);
+					//e.printStackTrace();
+					return 1;
 				}
 				
 				String key = rdJson.get("id").toString();
@@ -314,12 +331,14 @@ public class VkCityDataBase {
 			
 			ctRd.close();
 		} catch (FileNotFoundException e) {
-			System.out.println("Error: City base file not found");
-			e.printStackTrace();
+//			System.out.println("Error: City base file not found");
+//			e.printStackTrace();
+			log.fatal("City base file not found: " + e);
 			System.exit(1);
 		} catch (IOException e) {
-			System.out.println("Error: Can't read City base file");
-			e.printStackTrace();
+//			System.out.println("Error: Can't read City base file");
+//			e.printStackTrace();
+			log.fatal("Can't read City base file: " + e);
 			System.exit(1);
 		}
 		

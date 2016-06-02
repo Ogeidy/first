@@ -13,6 +13,9 @@ import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 /**
  * Realize some methods for connection with VK API.
@@ -30,6 +33,8 @@ public class VkApi {
 	
 	private VkConfig conf;
 	private VkPrint prnt;
+	
+	private static final Logger log = LogManager.getLogger(VkApi.class.getSimpleName());
 	
 	private String API_REQUEST = "https://api.vk.com/method/{METHOD_NAME}"
             + "?{PARAMETERS}"
@@ -73,8 +78,9 @@ public class VkApi {
         	/* Running the default browser with 'reqUrl' for getting access token */
             Desktop.getDesktop().browse(new URL(reqUrl).toURI());
         } catch (URISyntaxException ex) {
-        	if (DBG) prnt.log(TAG+" Can't open browser. Exception:"+ex);
-        	ex.printStackTrace();
+        	//if (DBG) prnt.log(TAG+" Can't open browser. Exception:"+ex);
+        	//ex.printStackTrace();
+        	log.warn("Can't open browser. Exception:"+ex);
             throw new IOException(ex);
         }
 	}
@@ -116,11 +122,13 @@ public class VkApi {
 			br.close();
 			sock.close();
 		}catch (MalformedURLException e) {
-			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
-		    e.printStackTrace();
+			//if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
+			log.warn("Malformed URL. Exception:"+e);
+		    //e.printStackTrace();
 		} catch (IOException e) {
-			if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
-		    e.printStackTrace();
+			//if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
+			log.warn("Can't sand request. Exception:"+e);
+		    //e.printStackTrace();
 		}
 		
 		// Warning! Here recursion is possible
@@ -177,11 +185,13 @@ public class VkApi {
 			con.disconnect();
 			
 		}catch (MalformedURLException e) {
-			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
-		    e.printStackTrace();
+//			if (DBG) prnt.log(TAG+" Malformed URL. Exception:"+e);
+//		    e.printStackTrace();
+		    log.warn("Malformed URL. Exception:"+e);
 		} catch (IOException e) {
-			if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
-		    e.printStackTrace();
+//			if (DBG) prnt.log(TAG+" Can't sand request. Exception:"+e);
+//		    e.printStackTrace();
+		    log.warn("Can't sand request. Exception:"+e);
 		}
 		
 		// Warning! Here recursion is possible
@@ -190,7 +200,8 @@ public class VkApi {
 			data = sendReqS(method , parameters);
 		}
 		else if (checkVal == -1) {
-			if (DBG) prnt.log(TAG+"Program closed!");
+			//if (DBG) prnt.log(TAG+"Program closed!");
+			log.fatal("Program closed!");
 			System.exit(1);
 		}
 		
@@ -210,17 +221,22 @@ public class VkApi {
 		if (data.contains("{\"error\":")){
 			int code = Integer.parseInt(data.substring(data.indexOf("{\"error_code\":")
 					+ 14,data.indexOf(",\"error_msg\":")));
-			if (DBG) prnt.log(TAG+" Error code: " + code);
+			//if (DBG) prnt.log(TAG+" Error code: " + code);
+			log.warn(" Error code: " + code);
 			
 			if (code == 5){
-				prnt.log(TAG+" User authorization failed!");
-				prnt.log(TAG+" Confirm your agreement to accessto some data, "
+//				prnt.log(TAG+" User authorization failed!");
+//				prnt.log(TAG+" Confirm your agreement to accessto some data, "
+//						+ "copy here access token form address line:");
+				log.warn("User authorization failed!");
+				log.warn("Confirm your agreement to accessto some data, "
 						+ "copy here access token form address line:");
 
 				try {
 					auth();
 				} catch (IOException e) {
-					if (DBG) prnt.log(TAG+" Can't authenticate. Exception:"+e);
+//					if (DBG) prnt.log(TAG+" Can't authenticate. Exception:"+e);
+					log.warn("Can't authenticate. Exception:"+e);
 					e.printStackTrace();
 				}
 				
@@ -232,9 +248,12 @@ public class VkApi {
 				return 1;
 			} 
 			else if (code == 14) {
-				prnt.log(TAG+" Capcha needed!!");
-				prnt.log(TAG+data);
-				prnt.log(TAG+" Write below CapchaId and code from picture");
+//				prnt.log(TAG+" Capcha needed!!");
+//				prnt.log(TAG+data);
+//				prnt.log(TAG+" Write below CapchaId and code from picture");
+				log.warn("Capcha needed!!");
+				log.warn(data);
+				log.warn("Write below CapchaId and code from picture");
 				
 				Scanner inp = new Scanner(System.in);
 				if (inp.hasNext()) {
@@ -242,8 +261,9 @@ public class VkApi {
 					try {
 						capchaCode = URLEncoder.encode(inp.next(),"UTF-8");
 					} catch (UnsupportedEncodingException e) {
-						if (DBG) prnt.log(TAG+" Can't read capcha. Exception:"+e);
-						e.printStackTrace();
+						//if (DBG) prnt.log(TAG+" Can't read capcha. Exception:"+e);
+						log.warn("Can't read capcha. Exception:" + e);
+						//e.printStackTrace();
 					}
 				}
 				//in.close();
@@ -267,14 +287,16 @@ public class VkApi {
 		
 		long finish = System.currentTimeMillis();
 		int time = (int)(finish-startTime);
-		if (DBG) prnt.log("Time:"+time+"ms");
+		//if (DBG) prnt.log("Time:"+time+"ms");
+		log.info("Time:"+time+"ms");
 		
 		if (time < 340) {
 			try {
 				Thread.sleep(340 - time);
 			} catch (InterruptedException e) {
-				if (DBG) prnt.log(TAG+" Can't check time. Exception:"+e);
-				e.printStackTrace();
+//				if (DBG) prnt.log(TAG+" Can't check time. Exception:"+e);
+//				e.printStackTrace();
+				log.warn("Can't check time. Exception:" + e);
 			}
 		}
 		
